@@ -1,197 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en-gb" class="no-js">
 <head>
+  <!--
+  dylmye.github.io
+  dylmye.me
+  by dylan myers
+  rel cc-by
+  v3.0.2
+
+  credit:
+    webthemez     - og theme (neu)
+    bootstrap     - framework
+    isotope       - porfolio sorting (v1)
+    font-awesome  - icons
+
+  -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The portfolio of Dylan Myers: Coder, Designer and Semi-Automatic Food Processor">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>dyl\mye</title>
+    <meta name="description" content="I'm Dylan Myers, a web designer, coder and photographer based in England. Find out more about me.">
     <meta name="author" content="Dylan Myers">
-	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAIAIB0AAAEAIAAcDwAAJgAAACAgAgABAAEAMAEAAEIPAAAoAAAAIAAAADoAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAO8AAAC/AAAAWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAAAAP8AAAD/AAAAuAAAAAAAAAAAAAAAJwAAAP8AAAD/AAAAbgAAAAAAAAAAAAAAbAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArwAAAAYAAAAAAAAAAAAAAAAAAAC0AAAA/wAAAP8AAAC4AAAAAAAAAAAAAABsAAAA/wAAAP8AAACyAAAAAAAAAAAAAABsAAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAAD1AAAAyAAAAMgAAADnAAAA/wAAAP8AAAD/AAAAoAAAAAAAAAAAAAAAAAAAALQAAAD/AAAA/wAAALgAAAAAAAAAAAAAALEAAAD/AAAA/wAAAPIAAAAEAAAAAAAAAGwAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAANAAAAAAAAAAAAAAAAMAAACUAAAA/wAAAP8AAAD/AAAAQwAAAAAAAAAAAAAAtAAAAP8AAAD/AAAAuAAAAAAAAAAEAAAA8QAAAP8AAAD/AAAA/wAAADwAAAAAAAAAbAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA0AAAAAAAAAAAAAAAAAAAAAQAAADkAAAA/wAAAP8AAACyAAAAAAAAAAAAAAC0AAAA/wAAAP8AAAC4AAAAAAAAADsAAAD/AAAA/wAAAP0AAAD/AAAAgQAAAAAAAABsAAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAADQAAAAAAAAAAAAAAAAAAAAAAAAAIcAAAD/AAAA/wAAAPUAAAAEAAAAAAAAALQAAAD/AAAA/wAAALgAAAAAAAAAgQAAAP8AAADtAAAAtQAAAP8AAADGAAAAAAAAAGwAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAANAAAAAAAAAAAAAAAAAAAAAAAAAAVQAAAP8AAAD/AAAA/wAAACkAAAAAAAAAtAAAAP8AAAD/AAAAuAAAAAAAAADGAAAA/wAAALMAAAB3AAAA/wAAAPwAAAAPAAAAbAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA0AAAAAAAAAAAAAAAAAAAAAAAAAA6AAAA/wAAAP8AAAD/AAAAPAAAAAAAAAC0AAAA/wAAAP8AAAC4AAAADwAAAPwAAAD/AAAAdwAAADsAAAD/AAAA/wAAAFAAAABsAAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAADQAAAAAAAAAAAAAAAAAAAAAAAAADAAAAD/AAAA/wAAAP8AAABEAAAAAAAAALQAAAD/AAAA/wAAALgAAABQAAAA/wAAAP8AAAA8AAAABgAAAPcAAAD/AAAAlQAAAGwAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAANAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAP8AAAD/AAAA/wAAAEQAAAAAAAAAtAAAAP8AAAD/AAAAuAAAAJUAAAD/AAAA+AAAAAcAAAAAAAAAwgAAAP8AAADaAAAAbAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAwAAAA/wAAAP8AAAD/AAAARAAAAAAAAAC0AAAA/wAAAP8AAAC4AAAA2gAAAP8AAADEAAAAAAAAAAAAAACGAAAA/wAAAP8AAACLAAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAADQAAAAAAAAAAAAAAAAAAAAAAAAADoAAAD/AAAA/wAAAP8AAAA8AAAAAAAAALQAAAD/AAAA/wAAANoAAAD/AAAA/wAAAIgAAAAAAAAAAAAAAEkAAAD/AAAA/wAAANIAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAANAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAP8AAAD/AAAA/wAAACgAAAAAAAAAtAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAATAAAAAAAAAAAAAAADwAAAP0AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA0AAAAAAAAAAAAAAAAAAAAAAAAACHAAAA/wAAAP8AAAD0AAAAAwAAAAAAAAC0AAAA/wAAAP8AAAD/AAAA/wAAAP4AAAARAAAAAAAAAAAAAAAAAAAA0AAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAADQAAAAAAAAAAAAAAAAAAAABQAAAOUAAAD/AAAA/wAAAK8AAAAAAAAAAAAAALQAAAD/AAAA/wAAAP8AAAD/AAAA1QAAAAAAAAAAAAAAAAAAAAAAAACUAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAANAAAAAAAAAAAAAAAAMAAACWAAAA/wAAAP8AAAD/AAAAPgAAAAAAAAAAAAAAtAAAAP8AAAD/AAAA/wAAAP8AAACZAAAAAAAAAAAAAAAAAAAAAAAAAFgAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAoAAAAP8AAAD/AAAA9QAAAMgAAADIAAAA5wAAAP8AAAD/AAAA/wAAAJsAAAAAAAAAAAAAAAAAAAC0AAAA/wAAAP8AAAD/AAAA/wAAAF0AAAAAAAAAAAAAAAAAAAAAAAAAGwAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAACgAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAACrAAAABQAAAAAAAAAAAAAAAAAAALQAAAD/AAAA/wAAAP8AAAD/AAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAKAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAO0AAAC9AAAAVwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAAAAP8AAAD/AAAA/wAAAOUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///////////////////////////////4B+HPGAHhxxgA4YcYcOGHGHhhgxh4YQMYfGETGHxhMxh8YTEYfGAxGHxgMBh8YDgYfGB4GHhgeBh4YHgYcOB8GADg/BgB4PwYB+D8H/////////////////////KAAAACAAAABAAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w==">
-    <title>I AM DYLAN</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAQAAEABADaAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAaFJREFUWIXtl01rwkAQht9ssjYJkhaN4kHE9lj6e/vLpMcihULQVOxWkuh+2EMbSMyuMbbFQ/OewszO7DPZGZa1bh8/9rigyCU3bwFagBYAAJz8Y/M0g9Ptlpx7tYdFLNBwCNv3tQk2TzN40zuj/1AySZDOn9G9fygDEIfCnUwrAUpI7KJX8BXgjifapHwVw/b1Pt3aomqPgDg23PEEltPBNoo0fgooBSVk7eZKSECpr5hTAXJdjUaQ7F27EQ2H4PGyNgePl6DhsGRr1IQ0DCHZumK3fR8qS4/GKiGhsrTSK40AiOtBMKb1OUEAvnozxkq2hhME1ZxNAGzfx3630/por2+EAwDBGOzg5mcAdSKuB5kkFbtMEhDXA3HsvwWg4QA8XlTsPF6AhgNtzO/+ge8Ki5OihAQI0VbfGEAmCaxO5+iaw5Hk8RK0F5qhmwCoLNV2clHFkTSN3tkAPI61nXyofCRNo3cWwDaKYAfXxrMsKh9JwRhor38cti5ZfhlBKe1lZUxcU3kFQAmO7GVecp5yHZtUV3kuq30XtAAtwL8H+ASNR6QM/iWCrQAAAABJRU5ErkJggg==">
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/isotope.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<body>
+    <header class="header">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="glyphicon glyphicon-user"></i>  <span class="light">I AM</span> DYLAN MYERS
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#work">Work</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>dyl\mye</b></a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="mainNav">
+                        <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                        <li><a href="#who" class="scroll-link">Who?</a></li>
+                        <li><a href="#skills" class="scroll-link">What?</a></li>
+                        <li><a href="#portfolio" class="scroll-link">Work?</a></li>
+                        <li><a href="#social" class="scroll-link">Talk?</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
         </div>
-        <!-- /.container -->
-    </nav>
+        <!--/.container-->
+    </header>
+    <!--/.header-->
+    <div id="#top"></div>
+    <section id="home">
+        <div class="banner-container">
+            <img src="img/banner-bg.jpg" alt="i am dylmye">
+        </div>
+    </section>
+    <section id="introText">
+        <div class="container">
+            <div class="text-center">
+            <h1><strong>Hi!</strong> I'm a programmer, graphic designer and photographer.</h1>
+              <p>I've been working in <strong>PHP</strong>, <strong>HTML</strong> and <strong>Javascript</strong> for 5 years, and first used Photoshop when I was 5 years old. No, really. I also take photos for a hobby. <a href="#portfolio">Why not check out my work?</a></p>
+            </div>
+        </div>
 
-    <!-- Intro Header -->
-    <header class="intro" id="intro-set-bg">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2" style="text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);">
-                        <h1 class="brand-heading">DYLAN MYERS</h1>
-                        <p class="intro-text">coder, designer and community manager</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+    </section>
+    <!--About-->
+    <section id="who" class="secPad">
+        <div class="container"><!-- who/programmer -->
+            <div class="heading text-center">
+                <!-- Heading -->
+                <h2>As a programmer</h2>
+                <p>I specialise in PHP5, HTML5, CSS3 and jQuery, however I'm constantly learning.<br>Off the web, I am currently learning Python.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center tileBox">
+                   <div class="txtHead"> <i class="fa fa-desktop"></i>
+                    <h3>Responsive Designer</h3></div>
+                    <p>Try this page out on your mobile device! I'm an expert in Bootstrap and Yahoo Pure.io. <a href="#portfolio">Look with your own eyes.</a></p>
+                </div>
+                <div class="col-md-4 text-center tileBox">
+                    <div class="txtHead"><i class="fa fa-jsfiddle"></i>
+                    <h3>Dynamic Coder</h3></div>
+                    <p>I practice jQuery, raw Javascript and PHP. Proof? <a href="#portfolio">Have a look at my work.</a></p>
+                </div>
+                <div class="col-md-4 text-center tileBox">
+                    <div class="txtHead"><i class="fa fa-html5"></i>
+                    <h3>Bleeding Edge</h3></div>
+                    <p>I use the latest semantic methods with cross-browser intentions to provide fresh, beautiul design matched with readable code. <a href="#portfolio">Hamburger menus galore.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container"><!-- who/design -->
+            <div class="heading text-center">
+                <!-- Heading -->
+                <h2>As a graphic designer</h2>
+                <p>GIMP is my forte, though I'm used to Photoshop and Paint.NET. 3d work includes use of Autodesk Maya.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center tileBox">
+                   <div class="txtHead"> <i class="fa fa-reorder"></i>
+                    <h3>2D and 3D</h3></div>
+                    <p><a href="#portfolio">Most art featured on the "DAYLOstar" project is original.</a></p>
+                </div>
+                <div class="col-md-4 text-center tileBox">
+                    <div class="txtHead"><i class="fa fa-google"></i>
+                    <h3>Material Freak</h3></div>
+                    <p>I love working on Material Design work. <a href="#portfolio">Check out my MIT App Inventor redesign.</a></p>
+                </div>
+                <div class="col-md-4 text-center tileBox">
+                    <div class="txtHead"><i class="fa fa-file-image-o"></i>
+                    <h3>Vector-&hearts;-in'</h3></div>
+                    <p>Just like my responsive design, on request I can work with scalable imagery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Quote-->
+    <section id="quote" class="bg-parlex">
+        <div class="parlex-back">
+            <div class="container secPad text-center">
+				<h2>Great companies are built on great products.</h2><h3><a href="https://twitter.com/elonmusk"><i class="fa fa-twitter"></i></a> Elon Musk, 2009</h3>
+            </div>
+            <!--/.container-->
+        </div>
+    </section>
+
+    <!--Skills-->
+    <section id="skills" class="secPad white">
+    	<div class="container">
+        <div class="heading text-center">
+                <!-- Heading -->
+                <h2>My Skills</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+        	<div class="row">
+                <div class="col-sm-6">
+                    <h2><strong>Programming</strong> Skills</h2>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">HTML5</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                                    <span class="sr-only">95% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">CSS3</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;">
+                                    <span class="sr-only">98% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">JavaScript + jQuery</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                    <span class="sr-only">90% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">Aria</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h2><strong>Designing</strong> Skills</h2>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">Photoshop</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                    <span class="sr-only">90% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">Maya</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                    <span class="sr-only">40% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 skilltitle">SVG design</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-<noscript>
-<style> header#intro-set-bg { background: url("img/dylan-bg-1.jpg") } </style>
-</noscript>
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About DYLAN</h2>
-                <p>Dylan Myers has been using Photoshop since he was three years old. He is well-equipped with his self-taught knowledge of HTML and CSS. He takes after <a href="http://researchclinic.net/?from=dylan">his father</a> with his technological prowess. Dylan is influenced by Design With Intent and frequently uses minimalism in his works, notably his popular <a href="#works">Stylish re-work</a> and the design for his recently-launched games website, DAYLOstar. He's also contributed to <a href="https://github.com/dylmye">other people's projects on GitHub.</a><br>In terms of Social Media management, Dylan is relatively new to the field, however since the alpha release of DAYLOstar he has been maintaining a Twitter, Facebook and App.Net profile to provide helpful and regular info and drops related to it. He's also worked with upcoming technology news website, <a href="http://technom.uk/?from=dylan">Technom</a>, to provide social media solutions indefinitely across popular networks. </p>
-				<p>Dylan believes in:<br>
-				<ul class="prettylist">
-					<li>Semantic Coding</li>
-					<li>Design with intent</li>
-					<li>Automation</li>
-          <li>Cross-device and beautiful</li>
-        </ul>
-      </p>
-          </div>
-        </div>
-        <a href="#work" class="btn btn-circle page-scroll">
-            <i class="fa fa-angle-double-down animated"></i>
-        </a>
     </section>
 
-    <!-- Download Section -->
-    <section id="work" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Previous Work by Dylan Myers</h2>
-					<div class="row">
-						<div class="col-md-4">
-							<h4>Coding</h4>
-                <a href="http://daylostar.com?ref=github"><img src="img/shots/code-dstar.png" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-                <img src="img/shots/yph.png" style="width: 80%; height: auto; padding-bottom: 5%;"><br>
-						</div>
-						<div class="col-md-4">
-							<h4>Design</h4>
-                <a href="http://daylostar.com?ref=github"><img src="img/shots/design-dstar.png" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-								<a href="https://userstyles.org/styles/99983"><img src="img/shots/design-fb.png" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-								<a href="https://userstyles.org/styles/104740"><img src="img/shots/design-yt.jpeg" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-                <a href="https://www.youtube.com/channel/UCVgz6-_FiAgdh3a0nBSK2Xg?ref=dylan"><img src="img/shots/design-tn.png" style="width: 80%; height auto; padding-bottom: 5%;"></a><br>
-						</div>
-						<div class="col-md-4">
-							<h4>Community</h4>
-                <a href="https://app.net/daylo"><img src="img/shots/comm-dstar.png" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-                <a href="https://www.facebook.com/UKTechnom"><img src="img/shots/comm-tn.png" style="width: 80%; height: auto; padding-bottom: 5%;"></a><br>
-                <img src="img/shots/yph.png" style="width: 80%; height: auto; padding-bottom: 5%;"><br>
-						</div>
+
+   <!--Portfolio-->
+    <section id="portfolio" class="page-section section appear clearfix secPad">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>Portfolio</h2>
+                <p>COMING SOON</p>
+            </div>
+        </div>
+    </section>
+
+	<!--Contact -->
+    <section id="social" class="page-section secPad">
+        <div class="container">
+
+            <div class="row">
+                <div class="heading text-center">
+                    <!-- Heading -->
+                    <h2>Let's Keep In Touch!</h2>
+                    <p>Fnd me across the internet to have a natter.</p>
                 </div>
-                <a href="#contact" class="btn btn-circle page-scroll">
-                    <i class="fa fa-angle-double-down animated"></i>
-                </a>
+                <div class="social text-centre">
+                    <a href="https://twitter.com/dylmye" title="follow me on twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://flickr.com/photos/dylan-myers/" title="see some of my photos on flickr"><i class="fa fa-flickr"></i></a>
+                    <a href="https://github.com/dylmye" title="check out my projects on github"><i class="fa fa-github"></i></a>
+                    <a href="http://stackoverflow.com/users/2710385/daylostar" title="see my community work on stack overflow"><i class="fa fa-stack-overflow"></i></a>
+                    <a href="https://steamcommunity.com/id/dylmye" title="play with me on steam"><i class="fa fa-steam"></i></a>
+                    <a href="#" title="email me" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k=01pBbcT5AIETrT6-9Q8mJXXA==&c=Uc3LE-yG1X-VoGCXo8jI_5pcwaisM-4bfvpX7mZQIGM=', 'newwindow', 'width=600, height=300'); return false;"><i class="fa fa-envelope"></i></a>
+                </div>
             </div>
         </div>
+        <!--/.container-->
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Dylan</h2>
-                <p>If you have any ideas of any projects you want to pursue, contract me for anything, or just ask me questions, contact me below!</p>
-                <p><a href="http://www.google.com/recaptcha/mailhide/d?k=01pBbcT5AIETrT6-9Q8mJXXA==&amp;c=Uc3LE-yG1X-VoGCXo8jI_5pcwaisM-4bfvpX7mZQIGM=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501pBbcT5AIETrT6-9Q8mJXXA\75\75\46c\75Uc3LE-yG1X-VoGCXo8jI_5pcwaisM-4bfvpX7mZQIGM\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">d...@riseup.net</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/mod_daylo" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/dylmye" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="http://stackoverflow.com/users/2710385/daylostar" class="btn btn-default btn-lg"><i class="fa fa-stack-overflow fa-fw"></i> <span class="network-name">StackOverflow</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/profile/view?id=323657378" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                    </li>
-                </ul>
+    <!--/.page-section-->
+    <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    CC-BY DYLAN MYERS 2015 - FOREVER
+                    <br>
+                    based on a framework originally created by webthemez and bootstrap
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>cc-by dylan myers 2014.</p>
+            <!-- / .row -->
         </div>
     </footer>
 
-	<!-- jQuery v 2.1.1 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
-	<!-- Intro BG script -->
-	<script>
-		var randombgs=["img/dylan-bg-1.jpg", "img/dylan-bg-2.jpg", "img/dylan-bg-3.jpg", "img/dylan-bg-4.jpg"]
-		div = document.getElementById ("intro-set-bg");
-		rand = randombgs[Math.floor(Math.random() * randombgs.length)];
-
-		div.style.backgroundImage = "url('" + rand + "')";
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
-
 </html>

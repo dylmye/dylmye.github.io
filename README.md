@@ -1,6 +1,6 @@
 dylmye.github.io
+v3.0.2
 ================
 
 Portfolio of Dylan Myers.
-
-Uses Bootstrap and a theme by StartBootstrap. Images from unsplash.com.
+Made with Bootstrap and based on work by webthemez.
