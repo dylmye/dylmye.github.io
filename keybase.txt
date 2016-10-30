@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/dylmye
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://dylmye.me
+  * I am dylmye (https://keybase.io/dylmye) on keybase.
+  * I have a public key with fingerprint 9001 8244 6622 B7AE D8AE  12DA 2C58 22A1 3652 5613
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101a13be0cd5738a489dcc4f8157edb23df8d37a1848b174efc4783f54896c34d130a",
+            "fingerprint": "900182446622b7aed8ae12da2c5822a136525613",
+            "host": "keybase.io",
+            "key_id": "2c5822a136525613",
+            "kid": "0101a13be0cd5738a489dcc4f8157edb23df8d37a1848b174efc4783f54896c34d130a",
+            "uid": "347184090d77090e7a38e294a1048619",
+            "username": "dylmye"
+        },
+        "service": {
+            "hostname": "dylmye.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1477863456,
+    "expire_in": 157680000,
+    "prev": "14224e4b9b44914ed614aeeda5038e0697f702390ff896d4dc04f0d574144105",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIhAnicrVJbSBRRGN7VLrqmBaEJIeRkhrQs58ycuW2YFdJDCRKEGBTLmTln1vGy
+s82Oa2JWQrVRUVRkkUQPgYGlRGpGF7LIsJuRXaAUKlLQwm4G0UPZGamHoMfOw7n8
+5/u///t+/tvpyR6fd+D7mYvPT83u9N6/ebjWU55VsaiB0yxSzwUbuCo6fdBqQmNO
+qMokXJADEEAMBY0CnYiyoGCkqETXkaFAUaZE4wViKESQMVSQokEZUUNHsiIYIgNK
+uoAIFADm/JxhRsLUjtpmxGG0KgBQ4RGSJJ7XZEyJginkCeZ1UeF5VlASeVGCAkus
+sGJuBhOn4RgNmBaLsUdoWt4/8P9Zd+00nYBkBgQqILLMdipjQaG8ijAESJGg6gJj
+1I7gGsrQpL66pp5yjX6OxeKmTt22uj7++g+wu5+L2pZj6VY1C1c4TjToZjn1URdW
+R7XQb4KQZkYI6yBLiFM7ZloRLggZUndMlxEiWVYkAYmSn6Nbo6ZNQ6aLEGVJAWy5
+ZWicUULE84giTdUQUiGiRIIIU0qwCJghIKmyIQNeUIFhsDYQRHSADMA6iCBCEIic
+a2lLxOKCIpOJw4wyZoYj2Km1md9bvZtmeLw+z6yZSe5keXyp8/7M22jO7Ck7f7O2
++OXHA2Nfru0qHcjo3SBkjmeMp3oVXPhm+buaFUXrl/UV4PkZWb6CVaPZG2P5S0Yq
+W7I+HYl/mCdeDeXRvqGjn8f1tfGuzJXN0e5zHYn9LY2D/RfGJlJafMaPbeGatjX3
+uvLap1Lb8tJKeu8l3b20LvrpicdOTjOayopze8jChYFDOa1rrwyvTrTuKRt6WnXn
+Ib+z6O2J90e/NK0ZGxnr7Hs2d6IzP31wb395x8+SlY25/uujgRsf9+3v6er4Gjw+
+8qA0cbA4ZY71uN0Zfl13uvvWybKUpYX933bCiubsRE8ANL84tuBR05Xt5ycvmyW5
+D/1nPZM79N0dxyoHQ6/EX5BqPaU=
+=NFrE
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dylmye
+
+==================================================================
