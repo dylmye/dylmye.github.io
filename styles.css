@@ -9,6 +9,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+html { overflow-y: auto; } /* override marx reset */
 body, input, select, textarea {
     color: #fff;
     font-family: 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -45,7 +46,7 @@ a:hover {
     display: none;
 }
 /* wrapper */
-#wrapper {
+.wrapper {
     height: 100%;
     left: 0;
     position: fixed;
@@ -65,15 +66,17 @@ a:hover {
     width: 6750px;
 }
 /* main */
-#main {
+main {
     height: 100%;
     left: 0;
     position: fixed;
     text-align: center;
     top: 0;
     width: 100%;
+	max-width: 100%; /* override marx reset */
+	padding: initial; /* override marx reset */
 }
-#main:before {
+main:before {
     content: '';
     display: inline-block;
     height: 100%;
