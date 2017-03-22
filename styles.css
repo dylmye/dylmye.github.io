@@ -30,6 +30,16 @@ a {
 a:hover {
     border-color: transparent;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 /* icons */
 .icon {
     text-decoration: none;
@@ -41,9 +51,6 @@ a:hover {
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
-}
-.icon > .label {
-    display: none;
 }
 /* wrapper */
 .wrapper {
