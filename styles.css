@@ -5,13 +5,11 @@
 
 /* basics */
 *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 html { overflow-y: auto; } /* override marx reset */
 body, input, select, textarea {
-    color: #fff;
+    color: #348cb2;
     font-family: 'Nunito', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15pt;
     font-weight: 700 !important;
@@ -19,7 +17,7 @@ body, input, select, textarea {
     line-height: 1.75em;
 }
 body {
-    background: #fff;
+    background: #ffffff;
 }
 a {
     border-bottom: dotted 1px;
