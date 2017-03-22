@@ -107,6 +107,7 @@ a:hover {
 #header nav {
     margin: 1.5em 0 0 0;
 }
+#header nav ul { padding-left: 0; } /* override marx reset */
 #header nav li {
     backface-visibility: hidden;
     display: inline-block;
