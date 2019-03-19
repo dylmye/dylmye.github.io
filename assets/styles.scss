@@ -1,0 +1,17 @@
+---
+---
+@import url('https://unpkg.com/primer/build/build.css');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700');
+
+body {
+  font-family: 'IBM Plex Sans', Roboto, Arial, Helvetica, sans-serif;
+}
+
+.github-component {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+html, body, body > .d-md-flex {
+  // make the page at least full-height
+  min-height: 100%;
+}
