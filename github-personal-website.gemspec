@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "github-personal-website"
-  spec.version       = "0.1.1"
-  spec.authors       = ["Brandon Rosage"]
-  spec.email         = ["brandonrosage@github.com"]
+  spec.name          = "dylmye.me"
+  spec.version       = "1.1.1"
+  spec.authors       = ["Brandon Rosage", "Dylan Myers"]
 
-  spec.summary       = "Jekyll theme for software developers intered in creating a personal website."
-  spec.homepage      = "http://github.dev."
+  spec.summary       = "Personal website based on the Github Personal Website project."
+  spec.homepage      = "http://dylmye.me"
   spec.license       = "MIT"
+  s.metadata         = { "source_code_uri" => "https://github.com/dylmye/dylmye.github.io" }
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
     f.match(%r{^(_(includes|layouts|sass)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)

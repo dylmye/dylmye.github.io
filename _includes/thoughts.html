@@ -1,5 +1,5 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Latest Blog Posts</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">See more ></p>
+<h2 class="text-white">Latest Blog Posts</h2>
+<p class="f4 mb-4 text-white"><a href="#" class="text-white">View older {% octicon chevron-right height:16 class:"mr-2 v-align-middle dm-cta-arrow" fill:#ffffff aria-hidden:true %}</a></p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4" style="display:flex;flex-direction:column">
   {% for post in site.posts limit: 5 %}
     <div class="col-md-12 mb-3" style="flex:1">
