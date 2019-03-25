@@ -1,6 +1,6 @@
 ---
 ---
-@import url('https://unpkg.com/primer/build/build.css');
+@import url('primer.11.min.css');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700');
 
 $primary: #2f363d;
@@ -29,6 +29,20 @@ html, body, body > .d-md-flex {
   min-height: 100%;
 }
 
+figure {
+  margin: 0;
+  margin-bottom: 1.5em;
+  figcaption {
+    background: $primary-darkest;
+    color: #fff;
+    margin-top: -0.4em; // account for <picture /> weirdness
+    padding: .5em;
+    & a {
+      color: #fff;
+    }
+  }
+}
+
 .bg-primary {
   background: $primary;
 }
@@ -51,5 +65,8 @@ html, body, body > .d-md-flex {
   font-size: 1.5rem;
   & a {
     color: $link;
+  }
+  & h1, h2 {
+    margin-top: 1.5em;
   }
 }

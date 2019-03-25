@@ -24,6 +24,16 @@
             <p class="f5"><a href="/" class="d-flex flex-items-center text-white">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Home %}Home</a></p>
             <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
             <p class="text-white mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
+            {% unless page.hide_figure %}
+              <figure class="dm-post-figure">
+                <picture>
+                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".webp" | absolute_url }}">
+                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}">
+                  <img src="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}" style="max-width:100%">
+                </picture>
+                <figcaption>{% if page.credit_url %}<a href="{{ page.credit_url }}">{% endif %}{{ page.credit }}{% if page.credit_url %}</a>{% endif %}</figcaption>
+              </figure>
+            {% endunless %}
             <div class="dm-post-content">
               {{ content }}
             </div>

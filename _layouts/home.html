@@ -20,7 +20,7 @@
 
     {% unless posts_total == 0 %}
       <div class="my-6">
-        {% include thoughts.html %}
+        {% include posts.html %}
       </div>
     {% endunless %}
   </div>
@@ -39,7 +39,7 @@
         {% endunless %}
 
         {% unless posts_total == 0 %}
-          {% include thoughts.html %}
+          {% include posts.html %}
         {% endunless %}
         
         {% include projects.html %}
