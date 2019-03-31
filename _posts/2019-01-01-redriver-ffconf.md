@@ -1,7 +1,7 @@
 ---
 title: "4 things I learned at FFConf 2018"
 published: false
-post_id: "0002"
+post_id: "0003"
 ---
 
 Back in November I had the privilege of attending my third FFConf. For the uninitiated, FFConf is an annual conference held in Brighton, England and is led by [Remy Sharp](https://remysharp.com/) - of JSbin and nodemon fame - and his wife, [Julie](https://twitter.com/Julieanne). It's a great insight into the future of the web thanks to the diverse range of speakers. Here are some of the take aways I gained from the tenth installment of the conference.

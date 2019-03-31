@@ -1,7 +1,7 @@
 ---
 title: "How useful is the BCS for graduates? More than you might think"
 published: true
-post_id: "0001"
+post_id: "0002"
 credit: "Startup Stock Photos (via Pexels)"
 credit_url: "https://www.pexels.com/photo/7374"
 rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
@@ -16,5 +16,3 @@ To me, the most influential talk was from Jamie Donaldson, a graduate who took p
 The rest of the talks were great, too. Laura Bartle from [the Young Professionals Group](http://www.bcs.org/category/9223) talked about its nationwide chapters, which provide free events, Nick Phillips discussed the advantages of applying for [RITTech certification](https://www.bcs.org/membership/get-registered/professional-registration-for-it-technicians-rittech/) as a graduate and [the AMBCS associate programme](https://www.bcs.org/membership/become-a-member/membership-grades-and-fees/associate-member-criteria/) for apprentices. Finally, Adam Thilthorpe (BCS Director of Professionalism) led an interesting discussion on corporate governance and the importance of innovation.
 
 It was all pretty convincing and reassuring evidence that the BCS knows how much graduates and apprentices matter to this industry. I’m also convinced that graduates looking to join the BCS are making a worthwhile investment in their future.
-
-*This post was originally shared on the [Red River](https://river.red/bcs-graduates-seminar-havant/) blog.*

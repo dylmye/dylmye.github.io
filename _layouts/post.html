@@ -1,17 +1,5 @@
 {% include header.html %}
 
-{% if site.layout == 'stacked' %}
-  <div class="container-lg py-6 p-responsive text-center">
-    {% include masthead.html metadata=false %}
-
-    <div class="container-md f4 text-left border rounded-2 bg-white p-3 p-sm-5 mt-6">
-      <p class="f5"><a href="/" class="d-flex flex-items-center">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:#0366d6 aria-label:Home %}Home</a></p>
-      <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-      <p class="text-white mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
-      {{ content }}
-    </div>
-  </div>
-{% else %}
   <div class="d-md-flex">
     <div class="flex-self-stretch bg-gray-dark col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
       {% include masthead.html metadata=true %}
@@ -23,13 +11,17 @@
           <div class="f4 text-white">
             <p class="f5"><a href="/" class="d-flex flex-items-center text-white">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Home %}Home</a></p>
             <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-            <p class="text-white mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
+            <p class="text-white mb-5">
+              Published {{ page.date | date: "%b %d, %Y"}}
+              {% if page.rr_blog_url %}&sdot; Originally shared on the <a href="{{ page.rr_blog_url }}" target="_blank">Red River blog</a>{% endif %}
+              {% if page.hackernoon_url %}&sdot; Originally shared on the <a href="{{ page.hackernoon_url }}" target="_blank">Hacker Noon blog</a>{% endif %}
+            </p>
             {% unless page.hide_figure %}
               <figure class="dm-post-figure">
                 <picture>
                   <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".webp" | absolute_url }}">
                   <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}">
-                  <img src="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}" style="max-width:100%">
+                  <img src="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}" style="width:100%">
                 </picture>
                 <figcaption>{% if page.credit_url %}<a href="{{ page.credit_url }}">{% endif %}{{ page.credit }}{% if page.credit_url %}</a>{% endif %}</figcaption>
               </figure>
@@ -41,7 +33,6 @@
         </div>
       </div>
     </div>
-  </div>
-{% endif %}
+</div>
 
 {% include footer.html %}
