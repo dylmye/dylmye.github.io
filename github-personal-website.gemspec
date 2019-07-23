@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Brandon Rosage", "Dylan Myers"]
 
   spec.summary       = "Personal website based on the Github Personal Website project."
-  spec.homepage      = "http://dylmye.me"
+  spec.homepage      = "https://dylmye.me"
   spec.license       = "MIT"
   s.metadata         = { "source_code_uri" => "https://github.com/dylmye/dylmye.github.io" }
 
