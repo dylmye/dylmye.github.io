@@ -1,0 +1,11 @@
+<div class="height-full text-left bg-white rounded-1 p-3 dm-post-card">
+  <div class="d-flex flex-justify-between flex-items-start mb-1">
+    <h1 class="f4 lh-condensed mb-1">
+      <a href="{{ post.url }}">
+        {{ post.title | camelcase }}
+      </a>
+    </h1>
+  </div>
+  <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
+  <p class="text-gray mb-2">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>
+</div>

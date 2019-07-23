@@ -1,0 +1,4 @@
+<figure>
+    <img src="{{ "/assets/posts/" | append: page.post_id | append: "-" | append: include.name | append: ".jpg" | absolute_url }}" style="max-width:100%" alt="{{ include.alt }}">
+    {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
