@@ -1,9 +1,20 @@
 <h2 class="text-white">Latest Code Projects</h2>
 <p class="f4 mb-4 text-white"><a href="https://github.com/dylmye" class="text-white" target="_blank">View more {% octicon chevron-right height:16 class:"mr-2 v-align-middle dm-cta-arrow" fill:#ffffff aria-hidden:true %}</a></p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% for repository in site.github.public_repositories | sort | limit: 6 %}
+  <!-- {% for repository in site.github.public_repositories | sort | limit: 6 %}
     <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
       {% include repo-card.html %}
     </div>
-  {% endfor %}
+  {% endfor %} -->
+  {% include repo-card-manual.html name="GarlicJar" description="An altcoin manager based on litecoin_balance, specifically for the Garlicoin currency. Written in React-Native." url="https://github.com/dylmye/GarlicJar" %}
+  {% include repo-card-manual.html name="PelleGlobe" description="The web interface for the collaborative project mapping the availability and pricing of San Pellegrino drinks across the globe." url="https://github.com/dylmye/pelleglobe-web" %}
+  {% include repo-card-manual.html name="material-design-colours" description="A small palette of material design colours that were formerly hosted by Google. I use this as a reference when I'm designing projects." url="https://github.com/dylmye/material-design-colours" %}
+</div>
+
+<br>
+
+<h2 class="text-white">Other Projects</h2>
+<br>
+<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+  {% include repo-card-manual.html name="Rhiannon Ferguson Design" description="Portfolio for an art student extending a Squarespace theme to meet the client's requirements. Includes custom-designed graphics, full responsive design and ecommerce support." url="https://rhiannonferguson.design/" custom_icon=true %}
 </div>
