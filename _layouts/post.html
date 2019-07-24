@@ -19,9 +19,9 @@
             {% unless page.hide_figure %}
               <figure class="dm-post-figure">
                 <picture>
-                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".webp" | absolute_url }}">
-                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}">
-                  <img src="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | absolute_url }}" style="width:100%">
+                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".webp" | relative_url }}">
+                  <source srcset="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | relative_url }}">
+                  <img src="{{ "/assets/posts/" | append: page.post_id | append: ".jpg" | relative_url }}" style="width:100%">
                 </picture>
                 <figcaption>{% if page.credit_url %}<a href="{{ page.credit_url }}">{% endif %}Credit: {{ page.credit }}{% if page.credit_url %}</a>{% endif %}</figcaption>
               </figure>
