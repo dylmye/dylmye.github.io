@@ -4,6 +4,7 @@ style: dark
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-feed
 
 permalink: /:year/:month/:day/:title/
 
