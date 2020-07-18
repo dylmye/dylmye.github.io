@@ -1,0 +1,26 @@
+{% include header.html %}
+  {% include masthead.html %}
+  <section id="main" class="post-container">
+    <main>
+      <article>
+        {% unless page.hide_figure %}
+        <figure class="post-figure-main">
+          <div class="post-figure" style="background-image: url('{{ "/assets/img/posts/" | append: page.post_id | append: ".jpg" | relative_url }}');"></div>
+          <figcaption>Credit: {{ page.credit }}</figcaption>
+        </figure>
+        {% endunless %}
+        <section id="article">
+          <script>console.log("{{ page.published | json }}")</script>
+          <small><a href="{{ site.url }}{{ site.baseurl | append:'/' }}" id="top" class="return-home"><img src="{{ "/assets/img/unicons/angle-right-b-invert.svg" | relative_url }}" aria-hidden />Return to home</a></small>
+          <h1>{{ page.title }}</h1>
+          <h2>{{ page.date | date: "%d %b, %Y"}}{% if page.hackernoon_url %} &bullet; Originally shared on the <a href="{{ page.hackernoon_url }}" target="_blank">Hacker Noon</a> blog{% endif %}{% if page.rr_blog_url %} &bullet; Originally shared on the <a href="{{ page.rr_blog_url }}" target="_blank">Red River</a> blog{% endif %}</h2>
+          {{ content }}
+        </section>
+      </article>
+    </main>
+    <footer>
+        <small><a href="#">Acknowledgements</a> &bullet; &copy; Dylan Myers 2020</small>
+    </footer>
+  </section>
+
+{% include footer.html %}

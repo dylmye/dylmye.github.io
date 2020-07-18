@@ -1,0 +1,6 @@
+<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+<p class="post-card-time">
+    <img src="assets/img/unicons/clock.svg" aria-hidden class="post-card-clock" title="Publish Date" />
+    <time datetime="{{ post.date | date: "%F"}}">{{ post.date | date: "%d %b, %Y"}}</time>
+</p>
+<p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>

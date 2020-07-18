@@ -1,0 +1,22 @@
+{% include header.html %}
+  {% include masthead.html %}
+  <section id="main" class="homepage-container">
+    <main>
+      <div class="card leading-card">
+        I’m Dylan, a full-stack developer with 3 years of professional experience in <u>React</u> and <u>C#</u>. I'm also interested in web accessibility and UX as a whole.<br/><a href="#">Read more</a>.
+      </div>
+
+      {% unless posts_total == 0 %}
+        {% include posts-preview.html %}
+      {% endunless %}
+
+      <!-- Projects -->
+
+      {% include contact-mobile.html %}
+    </main>
+    <footer>
+        <small><a href="#">Acknowledgements</a> &bullet; &copy; Dylan Myers 2020</small>
+    </footer>
+  </section>
+
+{% include footer.html %}
