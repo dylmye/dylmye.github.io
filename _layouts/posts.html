@@ -1,10 +1,16 @@
 {% include header.html %}
   {% include masthead.html %}
-  <section id="main" class="posts-container">
+  <section id="main" class="container posts-container">
     <main>
-        <!-- {% for post in site.posts %}
-        {% endfor %} -->
-        <p><em>Coming Soon</em></p>
+        <section id="posts" style="margin-top:0">
+          <small><a href="{{ site.url }}{{ site.baseurl | append:'/' }}" id="top" class="return-home"><img src="{{ "/assets/img/unicons/angle-right-b-invert.svg" | relative_url }}" aria-hidden />Return to home</a></small>
+          <h2>All Posts</h2>
+          {% for post in site.posts %}
+            <div class="card post-card">
+              {% include post-card.html %}
+            </div>
+          {% endfor %}
+        </section>
     </main>
     <footer>
         <small><a href="#">Acknowledgements</a> &bullet; &copy; Dylan Myers 2020</small>

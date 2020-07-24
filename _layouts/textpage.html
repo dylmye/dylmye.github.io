@@ -1,0 +1,14 @@
+{% include header.html %}
+  {% include masthead.html %}
+  <section id="main" class="container textpage-container">
+    <main>
+        <div class="card textpage-card" markdown="1">
+            {{ page.content }}
+        </div>
+    </main>
+    <footer>
+        <small><a href="#">Acknowledgements</a> &bullet; &copy; Dylan Myers 2020</small>
+    </footer>
+  </section>
+
+{% include footer.html %}
