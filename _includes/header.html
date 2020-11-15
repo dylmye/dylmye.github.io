@@ -5,9 +5,11 @@
 {% if page.path contains '_posts' %}
   {% assign page_title = page.title %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {% assign page_type = "article" %}
 {% else %}
   {% assign page_title = user.name %}
   {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {% assign page_type = "website" %}
 {% endif %}
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -32,15 +34,15 @@
     <meta name="theme-color" content="#000000">
 
     <meta property="og:url" content="https://dylmye.me">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ page_type }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content="{{ page_title }} - dylmye.me">
     <meta name="og:description" content="{{ meta_description }}">
     <meta property="og:image" content="{{ "/assets/img/social.png" | relative_url }}">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@dylmye">
-    <meta name="twitter:creator" content="@dylmye">
+    <meta name="twitter:site" content="@dylan_mye">
+    <meta name="twitter:creator" content="@dylan_mye">
     <meta name="twitter:title" content="{{ page_title }} - dylmye.me">
     <meta name="twitter:description" content="{{ meta_description }}">
     <meta name="twitter:image" content="{{ "/assets/img/social.png" | relative_url }}">
