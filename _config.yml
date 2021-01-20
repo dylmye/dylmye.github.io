@@ -5,6 +5,7 @@ plugins:
   - jekyll-octicons
   - jekyll-github-metadata
   - jemoji
+  - jekyll-feed
 
 permalink: /:year/:month/:day/:title/
 
@@ -28,3 +29,7 @@ projects:
     projects:
     - dylmye/material-design-colours
     - dylmye/sadgeclipper
+
+# jekyll-feed
+title: Dylan Myers Blog
+url: "https://dylmye.me/"

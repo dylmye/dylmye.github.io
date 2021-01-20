@@ -6,6 +6,10 @@ categories: ["Tech", "Apprenticeships"]
 credit: "Startup Stock Photos (via Pexels)"
 credit_url: "https://www.pexels.com/photo/7374"
 rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
+
+# atom tags
+author: dylan
+image: "/assets/img/posts/0002.jpg"
 ---
 
 **Last week I was invited by some fellow degree apprentices working at SSE to a [BCS (The Chartered Institute for IT)](http://www.bcs.org/) seminar. The aim of the talk was to give guidance to apprentices and graduates on advancing their career path, and the role which BCS could play in their careers.**

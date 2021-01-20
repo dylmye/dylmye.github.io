@@ -6,6 +6,10 @@ categories: ["Tech", "Investigations"]
 hide_figure: true
 hackernoon_url: https://hackernoon.com/lastpass-authenticator-app-is-not-secure-77b9743c3007
 excerpt: "I've found a really easy way to bypass the fingerprint/PIN authentication that protects all of your 2FA codes. The Android app, produced by LastPass, doesn't"
+
+# atom tags
+author: dylan
+# image: "/assets/img/posts/0001.jpg"
 ---
 
 > **UPDATE: The issue has been fixed. Please see the end of the article.**

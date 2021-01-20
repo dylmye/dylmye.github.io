@@ -5,6 +5,10 @@ post_id: "0003"
 categories: ["Tech"]
 credit: "Seb Lee-Delisle (CC BY-NC-ND 2.0)"
 credit_url: "https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/"
+
+# atom tags
+author: dylan
+image: "/assets/img/posts/0003.jpg"
 ---
 
 Back in November I had the privilege of attending my third FFConf. For the uninitiated, FFConf is an annual conference held in Brighton, England and is led by [Remy Sharp](https://remysharp.com/) of JSbin and nodemon fame. It's a great insight into the future of the web thanks to the diverse range of speakers. Here are some of the take aways I gained from the tenth installment of the conference.
