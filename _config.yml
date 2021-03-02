@@ -33,3 +33,5 @@ projects:
 # jekyll-feed
 title: Dylan Myers Blog
 url: "https://dylmye.me"
+feed:
+  # path: atom.xml # set a custom feed URL path. default: feed.xml
