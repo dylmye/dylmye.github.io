@@ -6,6 +6,7 @@ categories: ["Tech", "Apprenticeships"]
 credit: "Startup Stock Photos (via Pexels)"
 credit_url: "https://www.pexels.com/photo/7374"
 rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
+image: assets/img/posts/0002.jpg
 
 # atom tags
 author: dylan

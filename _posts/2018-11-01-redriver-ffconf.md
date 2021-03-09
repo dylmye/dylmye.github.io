@@ -5,6 +5,7 @@ post_id: "0003"
 categories: ["Tech"]
 credit: "Seb Lee-Delisle (CC BY-NC-ND 2.0)"
 credit_url: "https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/"
+image: assets/img/posts/0003.jpg
 
 # atom tags
 author: dylan

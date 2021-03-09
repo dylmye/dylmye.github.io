@@ -1,4 +1,5 @@
+{% if include.ext %}{% assign ext = include.ext %}{% else %}{% assign ext = ".jpg" %}{% endif %}
 <figure class="post-figure-inline">
-    <img src="{{ "/assets/img/posts/" | append: page.post_id | append: "-" | append: include.name | append: ".jpg" | relative_url }}" style="max-width:100%" alt="{{ include.alt }}">
+    <img src="{{ "/assets/img/posts/" | append: page.post_id | append: "-" | append: include.name | append: ext | relative_url }}" style="max-width:100%" alt="{{ include.alt }}">
     {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
