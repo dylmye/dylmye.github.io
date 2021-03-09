@@ -4,6 +4,9 @@ published: true
 post_id: "0004"
 categories: ["Tech"]
 credit: Dylan Myers
+
+# atom tags
+author: dylan
 image: assets/img/posts/0004.jpg
 ---
 
