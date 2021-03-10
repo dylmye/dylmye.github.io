@@ -90,7 +90,7 @@ Click send. In insomnia you should see something like the screenshot below. Copy
 
 ``` json
 {
-    "type": "channel.follow",
+    "type": "stream.online",
     "version": "1",
     "condition": {
         "broadcaster_user_id": "<USER-ID-HERE>"
