@@ -1,3 +1,4 @@
+{% assign post_banner_img = "/assets/img/posts/" | append: page.post_id | append: ".jpg" %}
 {% include header.html %}
   {% include masthead.html %}
   <section id="main" class="container post-container">
@@ -5,7 +6,7 @@
       <article>
         {% unless page.hide_figure %}
         <figure class="post-figure-main">
-          <div class="post-figure" style="background-image: url('{{ "/assets/img/posts/" | append: page.post_id | append: ".jpg" | relative_url }}');"></div>
+          <div class="post-figure" style="background-image: url('{{ post_banner_img | relative_url }}');"></div>
           <figcaption>Credit: {{ page.credit }}</figcaption>
         </figure>
         {% endunless %}

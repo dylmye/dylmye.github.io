@@ -6,10 +6,12 @@
   {% assign page_title = page.title %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
   {% assign page_type = "article" %}
+  {% assign social_image = post_banner_img %}
 {% else %}
   {% assign page_title = user.name %}
   {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
   {% assign page_type = "website" %}
+  {% assign social_image = "/assets/img/social.png" %}
 {% endif %}
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -38,14 +40,14 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content="{{ page_title }} - dylmye.me">
     <meta name="og:description" content="{{ meta_description }}">
-    <meta property="og:image" content="{{ "/assets/img/social.png" | relative_url }}">
+    <meta property="og:image" content="{{ social_image | absolute_url }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@dylan_mye">
     <meta name="twitter:creator" content="@dylan_mye">
     <meta name="twitter:title" content="{{ page_title }} - dylmye.me">
     <meta name="twitter:description" content="{{ meta_description }}">
-    <meta name="twitter:image" content="{{ "/assets/img/social.png" | relative_url }}">
+    <meta name="twitter:image" content="{{ social_image | absolute_url }}">
 
     {% feed_meta %}
 </head>
