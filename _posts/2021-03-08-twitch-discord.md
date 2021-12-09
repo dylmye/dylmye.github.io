@@ -38,7 +38,7 @@ Right, here's the bit you care about. To implement this in your Discord, there a
 
 This tutorial should take about 30-45 minutes from downloading everything to having a bot that will send messages when you go live. You may need minimal programming experience. If you have any feedback or questions please [let me know](https://twitter.com/dylan_mye) :)
 
-1. To get started, let's set up your accounts. [Create a Twitch Developer app](https://dev.twitch.tv/console/apps) with any name and a Oauth Redirect URL of `http://localhost`. I selected the category 'application integration' because it's technically integrating with Discord. Create and store a client secret for later by clicking 'new secret' on the app's detail page. 
+1. To get started, let's set up your accounts. [Create a Twitch Developer app](https://dev.twitch.tv/console/apps) with any name and a Oauth Redirect URL of `http://localhost`. I selected the category 'application integration' because it's technically integrating with Discord. Create and store a client secret for later by clicking 'new secret' on the app's detail page.
 
 {% include post_image.html name="twitchdash" ext=".png" alt="Screenshot of twitch console with generated client secret" %}
 
@@ -48,7 +48,7 @@ This tutorial should take about 30-45 minutes from downloading everything to hav
 {% include post_image.html name="dischook" ext=".png" alt="Screenshot of discord's webhook configuration menu" %}
 
 {:start="3"}
-1. Finally, let's set up the environment for the code to run in. Log in to [your AWS console](console.aws.amazon.com/), and in the search bar at the top, search for Lambda. Lambda is the product that lets us run code instantly. For the purposes of this tutorial, we are using the updated console preview. Click 'create function', then select 'Author from scratch'. Pick a name for your project, and for runtime, pick the first Python version under 'Latest supported'. At the time of writing, this is **Python 3.8**. Click 'create function' at the bottom right. You should see something like this.
+1. Finally, let's set up the environment for the code to run in. Log in to [your AWS console](https://console.aws.amazon.com/), and in the search bar at the top, search for Lambda. Lambda is the product that lets us run code instantly. For the purposes of this tutorial, we are using the updated console preview. Click 'create function', then select 'Author from scratch'. Pick a name for your project, and for runtime, pick the first Python version under 'Latest supported'. At the time of writing, this is **Python 3.8**. Click 'create function' at the bottom right. You should see something like this.
 
 {% include post_image.html name="lambda" ext=".png" alt="Screenshot of the aws console with a successfully created lambda function" %}
 
@@ -84,7 +84,7 @@ Click send. In insomnia you should see something like the screenshot below. Copy
 {:start="8"}
 1. Next, to create the subscription, let's make another request. It should be a POST request to the URL `https://api.twitch.tv/helix/eventsub/subscriptions`. Configure a new header 'Client-ID' that has the value of your Twitch app's client ID, like in the previous step. Set up 'Bearer token' authentication (in Insomnia, click on the arrow next to the 'Auth' header and select Bearer), and enter the token provided to you in step 7 in the token field. Make sure the body type is set to JSON (or `application/json`), and copy/paste the following in the body, replacing the following parts:
 
-* `broadcaster_user_id` - the user ID of the streamer. You can find it using [this useful tool](https://www.streamweasels.com/support/convert-twitch-username-to-user-id/) from StreamWeasels.
+* `broadcaster_user_id` - the user ID of the streamer. You can find it using [this useful tool](https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/) from StreamWeasels.
 * `callback` - the URL you copied in step 5. If you need it again, you can find it in the 'stages' section of your API Gateway.
 * `secret` - a random string that you will need if you need to make any changes to this subscription. You should store the string you use here.
 
@@ -108,7 +108,7 @@ It should look like this:
 {% include post_image.html name="inssub" ext=".png" alt="Screenshot of the insomnia api client configured for the subscription step" %}
 
 
-> The script handles verification steps outlined in the Twitch documentation. 
+> The script handles verification steps outlined in the Twitch documentation.
 
 You're done! When you next go live, people with the notification role you specified should be pinged when you're next live, within minutes of you going live.
 
@@ -123,3 +123,6 @@ Thanks to AWS free tier, The biggest cost is your time. The estimated annual cos
 ## Conclusion
 
 Is it worth the effort to make your own Twitch notification bot? Probably not, unless you enjoy tinkering and learning how to do things _on the cloud_. Or if, like me, notifications are causing you issues. It can be a fun way to get stuck in to cloud services like Lambda, which can be really powerful for things like this where configuring and maintaining a server would take longer than development of the business logic itself. And it's even easier when it's free!
+
+
+_Updated 9 Dec 2021 to update links._
