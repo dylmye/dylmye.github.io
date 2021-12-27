@@ -164,7 +164,7 @@ section.container h2 {
   & > .card {
     flex: 1;
     margin-right: 1rem;
-  
+
     &:last-child {
       margin-right: 0;
     }
@@ -255,9 +255,14 @@ section.container h2 {
   margin-right: 1rem;
 }
 
-#main.post-container main {
-  margin-top: 0;
-  max-width: 100% !important;
+#main.post-container {
+  main {
+    margin-top: 0;
+    max-width: 100% !important;
+  }
+  article {
+    margin-bottom: 25rem;
+  }
 }
 
 #main.post-container article #article {

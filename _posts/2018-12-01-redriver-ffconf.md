@@ -104,6 +104,10 @@ My favourite part of Tim's presentation was his chrome extension friend called B
 
 I generally got from these projects that having fun with coding teaches you a lot of tricks and features that help you in your career. I've always believed that working on fun hobby projects keeps you sane working on the more mundane coding projects.
 
+My favourite quote was: "I use the word algorithm when I don't want to describe the work I did." Very apt.
+
 ---
 
 Remy has very kindly shared the talks on [YouTube](https://www.youtube.com/playlist?list=PLXmT1r4krsTq3yrg4t14hPUbO1OsrA1Hx), I highly recommend you check them out. I can't wait to go again next year to see what's new.
+
+Thanks to Red River for covering my ticket and transportation so I could attend the conference.
