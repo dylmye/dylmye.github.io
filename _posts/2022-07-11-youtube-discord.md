@@ -55,4 +55,4 @@ The script automatically handles the verification process by responding with the
 
 Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you.
 
-(todo)
+(todo!)
