@@ -12,7 +12,9 @@ image: assets/img/posts/0004.jpg
 
 If you run a Discord server to accompany your Twitch stream, you probably have a channel dedicated to letting people know when you're livestreaming. Twitch notifications are infamously flaky, partially down to Twitch's dodgy ["smart notification" algorithm](https://link.twitch.tv/SmartNotifications) that tries (and often fails) to determine which device the recipient is active on to send a notification, as well as Android devices ["optimising" notification delivery](https://www.androidpolice.com/2020/07/18/phone-makers-are-breaking-your-favorite-apps-with-reckless-changes-to-androids-power-optimization-features/).
 
-There is an array of free tools that provide this functionality, namely the insanely popular [MEE6](https://help.mee6.xyz/en/article/twitch-live-notifications-wc0idt/), [Streamcord](https://streamcord.io/twitch/), and [Lyvego](https://lyvego.com/). However, I don't want to use MEE6, and the other tools have a tendency to send out notifications way too late. Additionally, these notifications aren't super customisable in terms of what text is shown. To fix this, I set about to create my own version of this. In this article, I set out how I made **Goli** and how, as a streamer, you can use the script I made for better Twitch notifications.
+There is an array of free tools that provide this functionality, namely the insanely popular [MEE6](https://mee6.xyz/tutorials/how-to-automatically-let-everyone-in-discord-know-when-you-go-live-on-twitch), [Streamcord](https://streamcord.io/twitch/), and [Lyvego](https://lyvego.com/). However, I don't want to use MEE6, and the other tools have a tendency to send out notifications way too late. Additionally, these notifications aren't super customisable in terms of what text is shown. To fix this, I set about to create my own version of these tools. In this article, I set out how I made **Goli** and how, as a streamer, you can use the script I made for better Twitch notifications.
+
+> Update (March 2022): You can now use [**Serverless**](https://www.serverless.com/) to deploy Goli to Lambda, skipping steps 3 thru 6, by following the instructions in [this GitHub repo](https://github.com/dylmye/aws-python-twitch-eventsub-to-discord-webhook).
 
 ## Goli's brains
 
@@ -126,3 +128,5 @@ Is it worth the effort to make your own Twitch notification bot? Probably not, u
 
 
 _Updated 9 Dec 2021 to update links._
+
+_Updated 11 July 2022 to update links, add serverless link_
