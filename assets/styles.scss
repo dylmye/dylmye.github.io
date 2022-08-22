@@ -338,6 +338,10 @@ section.container h2 {
   margin: 1.5rem auto;
   display: flex;
   justify-content: center;
+
+  &.with-caption {
+    flex-direction: column;
+  }
 }
 
 .post-figure-main figcaption {

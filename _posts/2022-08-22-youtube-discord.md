@@ -36,9 +36,9 @@ Click 'Deploy' in the top right, then you're done! You should see your notificat
 
 ## Method 2: Lambda Party
 
-The primary way we can fetch notifications for YouTube video uploads ourselves is through an old technology called [WebSub](https://www.w3.org/TR/websub/) (formerly PubSubHubBub, I know, I'm glad they changed it too.) Basically how it works is, you (the subscriber) use a "hub" (a fancy server)
+The primary way we can fetch notifications for YouTube video uploads ourselves is through an old technology called [WebSub](https://www.w3.org/TR/websub/) (formerly PubSubHubBub, I know, I'm glad they changed it too.) There's three parts to this WebSub chain. First up are "topics", which are essentially fancy [Atom feeds](https://en.wikipedia.org/wiki/Atom_(web_standard)). You, a "subscriber", tell a "hub" (the software that tracks all the topics and subscribers) to keep track of updates from the topic. The hub does this by sending a request to the topic. From now until the subscription expires, the topic will post updates to the hub. The hub then propagates the update to all the subscriptions. The subscription consists of a callback URL which the hub posts said data to. You can read more about WebSub [here](https://ably.com/topic/websub) (there's graphs too!) Anyway, **let's set up a subcription!**
 
-YouTube doesn't offer anything as nice to use as Twitch's EventSub. Instead it uses an old technology for notifications called [WebSub](https://www.w3.org/TR/websub/) (formerly PubSubHubBub, I know, I'm glad they changed it too.) Essentially it works like Twitch EventSub but it needs a special "hub" to route requests, and with some hubs you have to manually resubscribe to keep getting notifications. I've made a [Serverless deployment template](https://github.com/dylmye/aws-python-youtube-websub-to-discord-webhook) with a README that should get you started, with the Lambda and API Gateway setup, but let's go through it together to understand how it works.
+I've made a [Serverless deployment template](https://github.com/dylmye/aws-python-youtube-websub-to-discord-webhook) with a README that should get you started, with the Lambda and API Gateway setup, but let's go through it together to understand how it works.
 
 {% include post_image.html name="serverless-flow" ext=".png" alt="Flowchart between websub, aws and discord" %}
 
@@ -53,6 +53,8 @@ The script automatically handles the verification process by responding with the
 Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you.
 
 ## Acknowledgements
+
+Much appreciation to the Ably team for creating [this very easy to understand guide](https://ably.com/topic/websub) to WebSub.
 
 Thanks to Kevin Cox for [this useful article](https://kevincox.ca/2021/12/16/youtube-websub/) about the YouTube feed.
 
