@@ -336,6 +336,8 @@ section.container h2 {
 .post-figure-inline {
   width: 75%;
   margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
 }
 
 .post-figure-main figcaption {
