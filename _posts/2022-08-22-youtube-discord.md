@@ -1,5 +1,5 @@
 ---
-title: "2 ways to notify your Discord server when you upload to YouTube - with and without AWS"
+title: "3 ways to notify your Discord server when you upload to YouTube - with and without AWS"
 published: true
 post_id: "0005"
 categories: ["Tech"]
@@ -48,9 +48,38 @@ At the heart of it, the Lambda script takes in an XML entry, parses it with [Bea
 
 The script automatically handles the verification process by responding with the challenge code on the GET request. The Hub does all the hard work of pinging the 'topic' for updates, and dispatching that to your callback endpoint.
 
-### If you don't want to use Serverless
+## Method 2(b): If you don't want to use Serverless
 
-Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you.
+Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you. Please make sure you have [Python 3](https://www.python.org/downloads/) installed.
+
+First, grab [the channel ID](https://commentpicker.com/youtube-channel-id.php) you'll need it. Next, clone/download [this GitHub repository I made](https://github.com/dylmye/superfeedr-discord). Follow the install instructions including setting up the `env.py` with the Discord webhook URL you set up earlier, and optionally a [Discord role ID](https://www.youtube.com/watch?v=Xme4lBvrCN8). Zip up everything in the folder, because we're going to upload all of this to _The Cloud™_.
+
+Next we need to set up the place we're going to host and access this code. Head over to [Amazon Web Services](https://console.aws.amazon.com/lambda/home?region=us-east-1) where we're going to set up the Lambda (script host) and API Gateway (the way for us to call the script.) Click the big 'Create function' button, and make sure "Author from scratch" is selected. The only setting we care about here is setting the runtime environment to the latest supported version of Python.
+
+{% include post_image.html name="lambda-setup" ext=".png" alt="A screenshot of the Lambda creation form." caption="Your Lambda function setup should look like this." %}
+
+Next, upload the zip you made earlier. The button can be a little hard to find, but it's here:
+
+{% include post_image.html name="lambda-upload" ext=".png" alt="A small dropdown of upload options for Lambda scripts, the highlighted option being 'zip'." %}
+
+Now let's make the API Gateway functionality we talked about earlier. We're going to make a simple POST request handler which pipes all requests directly to the script we just uploaded. Click the "Add trigger button" in the function overview. Set up the API Gateway by selecting 'create a new API' and setting the API type to 'REST API' (because we don't need all the fancy functionality 'HTTP API' gives you.) Set your security to open for now. It's a good idea to add authentication later on but that's outside of the scope of this guide. Also the generated URL is random and not public facing so you shouldn't have any strong need for security right now.
+
+Your form should look like this:
+
+{% include post_image.html name="lambda-trigger-setup" ext=".png" alt="A screenshot of the lambda trigger creation form." %}
+
+Clicking the 'Add' button at the bottom should then redirect you to a view like this:
+
+{% include post_image.html name="lambda-trigger-confirm" ext=".png" alt="A screenshot of the lambda trigger, set up with all the details like the name of the API Gateway, the URL of the gateway, and the path." %}
+
+That "API endpoint" URL is what you need for the final step.
+
+Head over to [Superfeedr](https://superfeedr.com), a service that checks feeds using that "WebSub" technology we talked about before. Create an account as a subscriber, then set up a new subscription. The topic URL is `
+https://www.youtube.com/feeds/videos.xml?channel_id=` + the channel ID you made earlier (told you it'd come in handy!). The callback URL is the Lambda API endpoint URL. Finally, set the subscription format to "atom" (basically RSS.) THe form should look like this:
+
+{% include post_image.html name="lambda-superfeedr-setup" ext=".png" alt="A screenshot of the setup dialog for Superfeedr, with fields filled as detailed above." %}
+
+Click 'create' and you're done!
 
 ## Acknowledgements
 
@@ -59,3 +88,5 @@ Much appreciation to the Ably team for creating [this very easy to understand gu
 Thanks to Kevin Cox for [this useful article](https://kevincox.ca/2021/12/16/youtube-websub/) about the YouTube feed.
 
 Thanks to the contributors to [this IndieWebCamp wiki article](https://indieweb.org/How_to_publish_and_consume_WebSub), especially Aaron Parecki.
+
+Thanks to you for reading this :) Please do [get in touch](twitter.com/dylan_mye) if you have any feedback or comments!
