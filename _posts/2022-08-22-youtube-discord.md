@@ -7,7 +7,7 @@ credit: Dylan Myers
 
 # atom tags
 author: dylan
-image: assets/img/posts/0005.jpg
+image: "/assets/img/posts/0005.webp"
 ---
 
 Just like [Twitch notifications](https://dylmye.me/2021/03/08/twitch-discord/), notifying your Discord server about your YouTube uploads sounds like something that should be built in. Until it is, I have created a solution using AWS Lambda and API Gateway solutions. But first, here's an even easier (and free) way without using the oft slow and unreliable services like MEE6 and Dyno. The jist of how these solutions work is that we continually check a feed YouTube provides, and when we get a new entry we use a [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to post a new message.

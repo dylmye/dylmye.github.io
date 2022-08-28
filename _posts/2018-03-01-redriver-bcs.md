@@ -10,7 +10,7 @@ image: assets/img/posts/0002.jpg
 
 # atom tags
 author: dylan
-image: "/assets/img/posts/0002.jpg"
+image: "/assets/img/posts/0002.webp"
 ---
 
 **Last week I was invited by some fellow degree apprentices working at SSE to a [BCS (The Chartered Institute for IT)](http://www.bcs.org/) seminar. The aim of the talk was to give guidance to apprentices and graduates on advancing their career path, and the role which BCS could play in their careers.**

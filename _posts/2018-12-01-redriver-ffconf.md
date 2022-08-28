@@ -9,7 +9,7 @@ image: assets/img/posts/0003.jpg
 
 # atom tags
 author: dylan
-image: "/assets/img/posts/0003.jpg"
+image: "/assets/img/posts/0003.webp"
 ---
 
 Back in November I had the privilege of attending my third FFConf. For those who don't know, [FFConf](https://2018.ffconf.org/) is an annual conference focused on the bleeding edge of front-end development. It's held in Brighton, England and is led by veteran developer [Remy Sharp](https://remysharp.com/) of JSbin and nodemon fame. It's a great insight into the future of the web thanks to the diverse range of speakers and topics. Here are some of my take aways from this year's conference.

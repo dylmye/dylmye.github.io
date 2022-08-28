@@ -7,7 +7,7 @@ credit: Dylan Myers
 
 # atom tags
 author: dylan
-image: assets/img/posts/0004.jpg
+image: "/assets/img/posts/0004.webp"
 ---
 
 If you run a Discord server to accompany your Twitch stream, you probably have a channel dedicated to letting people know when you're livestreaming. Twitch notifications are infamously flaky, partially down to Twitch's dodgy ["smart notification" algorithm](https://link.twitch.tv/SmartNotifications) that tries (and often fails) to determine which device the recipient is active on to send a notification, as well as Android devices ["optimising" notification delivery](https://www.androidpolice.com/2020/07/18/phone-makers-are-breaking-your-favorite-apps-with-reckless-changes-to-androids-power-optimization-features/).
