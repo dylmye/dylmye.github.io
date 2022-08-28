@@ -1,5 +1,5 @@
 ---
-title: "4 things I learned at FFConf 2018"
+title: "4 things I learned at ffconf 2018"
 published: true
 post_id: "0003"
 categories: ["Tech"]
@@ -13,7 +13,7 @@ image: "/assets/img/posts/0003.webp"
 
 Back in November I had the privilege of attending my third FFConf. For those who don't know, [FFConf](https://2018.ffconf.org/) is an annual conference focused on the bleeding edge of front-end development. It's held in Brighton, England and is led by veteran developer [Remy Sharp](https://remysharp.com/) of JSbin and nodemon fame. It's a great insight into the future of the web thanks to the diverse range of speakers and topics. Here are some of my take aways from this year's conference.
 
-# 1. AI + JS is a thing, and its future is looking bright
+## 1. AI + JS is a thing, and its future is looking bright
 
 I was intrigued by [Elle Haproff](https://twitter.com/eleanorhaproff)'s (of AI JS Meetup London) talk about AI in client-side javascript. I've read about ML processing on cloud services previously, but it was really cool to see how capable browsers are when it comes to AI. Eleanor is one of the founders of the online showcase of these projects, [aijs.rocks](https://aijs.rocks), which features such projects as:
 
@@ -31,7 +31,7 @@ A good point Eleanor also made is that running ML client-side provides privacy b
 
 I found this all very useful as someone who doesn't really dabble in AI. In my day to day work I'm developing applications that process business data, and applying ML to this data could provide really valuable insights to our clients.
 
-# 2. There are a number of exciting features and proposals coming to JS
+## 2. There are a number of exciting features and proposals coming to JS
 
 While I work on greenfield applications a lot of the time (meaning I work on new JS stuff), I don't actively keep up to date with a lot of the TC39 proposals, so I was excited to see [Willian Martins](https://twitter.com/wmsbill)' presentation on the 'best of' new features. It's good to keep a tab on these proposals so you can integrate them as they become available, to enhance your code and surprise your ~~disgrunted~~ colleagues!
 
@@ -89,13 +89,13 @@ and the output would be:
 
 Personally, I can see how this could be useful for passing through props to child components in React.js and I'm looking forward to using it.
 
-# 3. You can recreate the 80s with the modern web (but why?)
+## 3. You can recreate the 80s with the modern web (but why?)
 
 Remy showed us how, even with all the fancy technology available for website development, we can still go back in time. I'd highly recommend [watching the 36 minute presentation](https://www.youtube.com/watch?v=lQMcZtiaD0A) in all its glory, it's very chaotic.
 
 Using APIs like the [oscillator node](https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createOscillator) and the deprecated [script processor](https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode), Remy made a script that makes audio of web pages and loads it in the way a Sinclair ZX Spectrum would, which is a questionable goal. It was a good deep dive into audio processing APIs and binary handling.
 
-# 4. You can do anything with Canvas
+## 4. You can do anything with Canvas
 
 To cap it all off, [Tim Holman](https://twitter.com/twholman) demonstrated his collection of ~~procrastination~~ spare time projects, like using Canvas to make the DVD logo screensaver hit the corner (if you know you know), and discussing how he uses them as a form of meditation. Tim also demos his procrastination corner named The Zen Zone, which looks great a good use of my lunch break.
 
