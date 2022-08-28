@@ -9,7 +9,6 @@ excerpt: "I've found a really easy way to bypass the fingerprint/PIN authenticat
 
 # atom tags
 author: dylan
-# image: "/assets/img/posts/0001.jpg"
 ---
 
 > **UPDATE: The issue has been fixed. Please see the end of the article.**
