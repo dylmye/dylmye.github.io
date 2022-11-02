@@ -10,7 +10,7 @@ author: dylan
 image: "/assets/img/posts/0007.webp"
 ---
 
-I've just come back from [PagerDuty's London conference](https://meet.pagerduty.com/connect-london), and surprisingly I learned a lot. I say I'm suprised and that's because I've never worked with PagerDuty or any of their competitors.
+I've just come back from [PagerDuty's London conference](https://meet.pagerduty.com/connect-london), and surprisingly I learned a lot. I say I'm suprised and that's because I've never used PagerDuty or any other incident response software.
 
 For the uninitiated, PagerDuty is a service that specialises in "incident response" - the technical term for "poo hitting the fan" - basically providing automated alerts to the right person when something goes wrong. Where I work, incidents are rare (thankfully) and as such, handled in a bespoke manner which definitely would not scale well. Incidents that happen far outside of standard working hours are not monitored. With this in mind, I wanted to learn how we could make the most of other company's teachings to improve our services in this regard. We were very lucky to hear from a number of great speakers on topics like handling risk in high pressure environments, incidient management at a large scale, and building incident management into digital transformation.
 
