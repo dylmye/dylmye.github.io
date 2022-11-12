@@ -26,7 +26,7 @@ Similarly, Chris Evans, co-founder of [Monzo](https://monzo.com/about/), gave th
 
 The advice from Chris?
 
-{% include post_image.html name="monzo-conclusion" ext=".webp" alt="1. Shadow rotations to encourage learning. 2. Runbooks to document the undocumented. 3. People on-call when it makes sense for you." caption="" %}
+{% include post_image.html name="monzo-conclusion" ext=".webp" alt="1. Shadow rotations to encourage learning. 2. Runbooks to document the undocumented. 3. People on-call when it makes sense for you." %}
 
 We met with some lovely people from a number of vendors, including [Sumo Logic](https://www.sumologic.com/) and [New Relic](https://newrelic.com/), who kindly sponsored the cracking open bar "networking reception".
 
