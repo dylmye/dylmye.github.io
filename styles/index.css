@@ -1,3 +1,55 @@
+@import '/assets/css/coldark-prism.css';
+
 @tailwind base;
+
+@layer base {
+  a {
+    @apply underline;
+    @apply hover:decoration-indigo-500;
+    text-decoration-thickness: 2px;
+    transition: 0.3s;
+  }
+  blockquote {
+    @apply p-4;
+    @apply my-4;
+    @apply border-l-4;
+    @apply border-gray-300;
+    @apply bg-gray-50;
+    @apply dark:border-gray-500;
+    @apply dark:bg-gray-800;
+  }
+  blockquote > p {
+    @apply dark:text-white;
+  }
+  figcaption {
+    @apply p-2;
+    @apply dark:border-gray-500;
+    @apply dark:bg-gray-800;
+    @apply dark:text-white;
+  }
+
+  body {
+    @apply dark:bg-gray-800 bg-white;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+.remark-highlight {
+  overflow-x: auto;
+}
+
+.remark-highlight > pre {
+  @apply p-4;
+}
+
+ul, ol {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-right: unset;
+}
+
+ol {
+  list-style:decimal;
+}

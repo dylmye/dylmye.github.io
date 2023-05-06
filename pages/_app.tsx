@@ -1,6 +1,11 @@
-import { AppProps } from 'next/app'
-import '../styles/index.css'
+import { AppProps } from "next/app";
+import "../styles/index.css";
+import { ThemeProvider } from "next-themes";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }: AppProps) => (
+  <ThemeProvider attribute="class">
+    <Component {...pageProps} />
+  </ThemeProvider>
+);
+
+export default App;

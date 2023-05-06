@@ -1,7 +1,27 @@
-import { remark } from 'remark'
-import html from 'remark-html'
+import { remark } from "remark";
+import remarkParse from "remark-parse";
+import remarkPrism from "remark-prism";
+import remarkGfm from "remark-gfm";
 
-export default async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown)
-  return result.toString()
-}
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeFigure from "rehype-figure";
+import rehypeExternalLinks from "rehype-external-links";
+
+const markdownToHtml = async (markdown: string): Promise<string> => {
+  const result = await remark()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkPrism, {
+      transformInlineCode: false,
+      plugins: ["line-numbers"],
+    })
+    .use(remarkRehype)
+    .use(rehypeFigure, { className: "shadow-sm" })
+    .use(rehypeExternalLinks, { target: "_blank" })
+    .use(rehypeStringify)
+    .process(markdown);
+  return result.toString();
+};
+
+export default markdownToHtml;
