@@ -1,6 +1,0 @@
-{% if include.ext %}{% assign ext = include.ext %}{% else %}{% assign ext = ".jpg" %}{% endif %}
-{% if include.caption %}{% assign figure_classes = "post-figure-inline with-caption" %}{% else %}{% assign figure_classes = "post-figure-inline" %}{% endif %}
-<figure class="{{ figure_classes }}">
-    <img src="{{ "/assets/img/posts/" | append: page.post_id | append: "-" | append: include.name | append: ext | absolute_url }}" style="max-width:100%" alt="{{ include.alt }}">
-    {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
-</figure>
