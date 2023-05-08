@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./components/**/*.tsx', './pages/**/*.tsx'],
   darkMode: 'class',
@@ -9,6 +12,7 @@ module.exports = {
         cyan: '#79FFE1',
         'dylan-navy': '#0E1527',
         'dylan-lightnavy': '#1F2E54',
+        'dylan-lighternavy': '#2D447E',
       },
       spacing: {
         28: '7rem',
@@ -18,6 +22,12 @@ module.exports = {
       },
       lineHeight: {
         tight: 1.2,
+      },
+      fontFamily: {
+        sans: [
+          "IBM Plex Sans",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       fontSize: {
         '5xl': '2.5rem',
@@ -31,5 +41,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
