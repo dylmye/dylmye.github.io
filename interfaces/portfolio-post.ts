@@ -4,6 +4,7 @@ interface PortfolioPostType {
   date: string;
   summary: string;
   content: string;
+  image?: string;
   githubUrl?: string;
   url?: string;
 };
