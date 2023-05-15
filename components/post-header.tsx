@@ -27,7 +27,7 @@ const PostHeader = ({
     <div className="max-w-2xl mx-auto">
       <div className="mb-6 text-lg">
         <strong>
-        <DateFormatter dateString={date} />
+        <DateFormatter dateString={date} dateFormat="PPP" />
         {hackernoonUrl && (
           <span>
             {" "}

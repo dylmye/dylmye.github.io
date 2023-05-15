@@ -14,6 +14,15 @@ export const getPortfolioSlugs = (category: PortfolioTypes): string[] => {
   return fs.readdirSync(portfolioDirectory(category));
 }
 
+export const getPostDateBySlug = (slug: string): string => {
+  const split = slug.split("-");
+  // there is no date + text = no date
+  if (split.length < 4) {
+    return "";
+  }
+  return split.slice(0, 3).join("-");
+};
+
 export const getPostBySlug = (slug: string, fields: string[] = []): Record<string, string> => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -29,6 +38,9 @@ export const getPostBySlug = (slug: string, fields: string[] = []): Record<strin
     }
     if (field === "content") {
       items[field] = content;
+    }
+    if (field === "date") {
+      items[field] = getPostDateBySlug(realSlug);
     }
 
     if (typeof data[field] !== "undefined") {
@@ -73,6 +85,16 @@ export const getAllPosts = (fields: string[] = []): Record<string, string>[] => 
   return posts;
 }
 
+export const getPaginatedPosts = (fields: string[] = [], limit = 6, offset = 0): Record<string, string>[] => {
+  const slugs = getPostSlugs();
+  const posts = slugs
+    // sort posts by date in descending order
+    .sort((slug1, slug2) => (getPostDateBySlug(slug1) > getPostDateBySlug(slug2) ? -1 : 1))
+    .slice(offset, offset + limit)
+    .map((slug) => getPostBySlug(slug, fields));
+  return posts;
+};
+
 export const getAllPortfolioPosts = (category: PortfolioTypes, fields: string[] = []): Record<string, string>[] => {
   const slugs = getPortfolioSlugs(category);
   const posts = slugs
@@ -81,3 +103,13 @@ export const getAllPortfolioPosts = (category: PortfolioTypes, fields: string[] 
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export const getPaginatedPortfolio = (category: PortfolioTypes, fields: string[] = [], limit = 6, offset = 0): Record<string, string>[] => {
+  const slugs = getPortfolioSlugs(category);
+  const posts = slugs
+    .slice(offset, offset + limit)
+    .map((slug) => getPortfolioPostBySlug(slug, category, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return posts;
+};

@@ -4,7 +4,6 @@ credit: 'Startup Stock Photos (via Pexels)'
 credit_url: https://www.pexels.com/photo/7374
 rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
 coverImage: '/assets/blog/2018-03-01-redriver-bcs/cover.webp'
-date: '2018-03-01T00:00:00.000Z'
 ---
 
 **Last week I was invited by some fellow degree apprentices working at SSE to a [BCS (The Chartered Institute for IT)](http://www.bcs.org/) seminar. The aim of the talk was to give guidance to apprentices and graduates on advancing their career path, and the role which BCS could play in their careers.**

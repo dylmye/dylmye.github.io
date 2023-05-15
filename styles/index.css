@@ -22,11 +22,14 @@
   blockquote > p {
     @apply dark:text-white;
   }
+  figure {
+    @apply bg-white/25;
+  }
   figcaption {
     @apply p-2;
-    @apply dark:border-gray-500;
-    @apply dark:bg-gray-800;
-    @apply dark:text-white;
+    @apply border-gray-500;
+    @apply bg-gray-800;
+    @apply text-white;
   }
 
   body {

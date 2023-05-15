@@ -1,5 +1,6 @@
 import React from "react";
 import Image, { ImageProps } from "next/image";
+import Link from "next/link";
 
 interface UnitProps {
   title?: string;
@@ -7,12 +8,23 @@ interface UnitProps {
   extraClasses?: string;
   image?: ImageProps["src"];
   link?: string;
+  type: 'blog' | 'portfolio';
 }
 
 /** A unit that lives inside a [`<Card />`](./Card.tsx), or a [`<UnitsVerticalList />`](./UnitsVerticalList.tsx) */
-const Unit = ({ extraClasses = "", title, description, image }: UnitProps) => (
-  <a href="#"
+const Unit = ({
+  extraClasses = "",
+  title,
+  description,
+  image,
+  link,
+  type,
+}: UnitProps) => (
+  <Link
+    as={link ?? "#"}
+    href={`${type === "blog" ? "posts" : "portfolio"}/[slug]`}
     className={`bg-white dark:bg-slate-500 rounded-md flex flex-col w-56 drop-shadow-md hover:drop-shadow-xl no-underline ${extraClasses}`}
+    title={`Read more about '${title}'`}
   >
     {image && (
       <Image
@@ -29,7 +41,7 @@ const Unit = ({ extraClasses = "", title, description, image }: UnitProps) => (
       {title && <p className="font-bold text-m">{title}</p>}
       {description && <p className="text-s">{description}</p>}
     </div>
-  </a>
+  </Link>
 );
 
 export default Unit;

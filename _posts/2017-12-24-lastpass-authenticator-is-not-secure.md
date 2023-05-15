@@ -1,6 +1,5 @@
 ---
 title: 'LastPass’ Authenticator app is not secure [Updated]'
-date: '2017-12-24T00:00:00.000Z'
 hackernoon_url: https://hackernoon.com/lastpass-authenticator-app-is-not-secure-77b9743c3007
 coverImage: '/assets/blog/2017-12-24-lastpass-authenticator-is-not-secure/cover.webp'
 ---

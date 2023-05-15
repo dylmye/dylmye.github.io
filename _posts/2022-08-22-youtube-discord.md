@@ -1,7 +1,6 @@
 ---
 title: '3 ways to notify your Discord server when you upload to YouTube - with and without AWS'
 coverImage: '/assets/blog/2022-08-22-youtube-discord/cover.webp'
-date: '2022-08-22T00:00:00.000Z'
 ---
 
 Just like [Twitch notifications](https://dylmye.me/2021/03/08/twitch-discord/), notifying your Discord server about your YouTube uploads sounds like something that should be built in. Until it is, I have created a solution using AWS Lambda and API Gateway solutions. But first, here's an even easier (and free) way without using the oft slow and unreliable services like MEE6 and Dyno. The jist of how these solutions work is that we continually check a feed YouTube provides, and when we get a new entry we use a [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to post a new message.
@@ -14,7 +13,7 @@ Sign up for [Pipedream](https://pipedream.com), it connects services together li
 
 ![The two-step form presented by Pipedream](/assets/blog/2022-08-22-youtube-discord/pipedream-step-1.png)
 
-Log in with your YouTube account (it **doesn't** need to be the same as the channel you're looking for uploads from). Get the [channel ID](https://commentpicker.com/youtube-channel-id.php) and set the Channel ID field to that.
+Log in with your YouTube account (it **doesn't** need to be the same as the channel you're looking for uploads from). Get the [channel ID or @handle](https://www.streamweasels.com/tools/youtube-channel-id-and-user-id-convertor/) and set the Channel ID field to that.
 
 On the free plan you get 333 daily invocations, so the minimum duration you can get for free is about every 5 minutes. Now we've filled out all the fields, click on "Create source" to make the channel source. It'll take a minute to get all the data, then you'll be prompted to select an event. Select the most recent one. This will be used to help make the message template later on.
 
@@ -46,7 +45,7 @@ The script automatically handles the verification process by responding with the
 
 Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you. Please make sure you have [Python 3](https://www.python.org/downloads/) installed.
 
-First, grab [the channel ID](https://commentpicker.com/youtube-channel-id.php) you'll need it. Next, clone/download [this GitHub repository I made](https://github.com/dylmye/superfeedr-discord). Follow the install instructions including setting up the `env.py` with the Discord webhook URL you set up earlier, and optionally a [Discord role ID](https://www.youtube.com/watch?v=Xme4lBvrCN8). Zip up everything in the folder, because we're going to upload all of this to _The Cloud™_.
+First, grab [the channel ID / @handle](https://www.streamweasels.com/tools/youtube-channel-id-and-user-id-convertor/) you'll need it. Next, clone/download [this GitHub repository I made](https://github.com/dylmye/superfeedr-discord). Follow the install instructions including setting up the `env.py` with the Discord webhook URL you set up earlier, and optionally a [Discord role ID](https://www.youtube.com/watch?v=Xme4lBvrCN8). Zip up everything in the folder, because we're going to upload all of this to _The Cloud™_.
 
 Next we need to set up the place we're going to host and access this code. Head over to [Amazon Web Services](https://console.aws.amazon.com/lambda/home?region=us-east-1) where we're going to set up the Lambda (script host) and API Gateway (the way for us to call the script.) Click the big 'Create function' button, and make sure "Author from scratch" is selected. The only setting we care about here is setting the runtime environment to the latest supported version of Python.
 

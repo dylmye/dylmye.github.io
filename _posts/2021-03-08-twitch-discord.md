@@ -1,7 +1,6 @@
 ---
 title: 'Notify your Discord server when you go live on Twitch with AWS Lambda'
 coverImage: '/assets/blog/2021-03-08-twitch-discord/cover.webp'
-date: '2021-03-08T00:00:00.000Z'
 ---
 
 If you run a Discord server to accompany your Twitch stream, you probably have a channel dedicated to letting people know when you're livestreaming. Twitch notifications are infamously flaky, partially down to Twitch's dodgy ["smart notification" algorithm](https://link.twitch.tv/SmartNotifications) that tries (and often fails) to determine which device the recipient is active on to send a notification, as well as Android devices ["optimising" notification delivery](https://www.androidpolice.com/2020/07/18/phone-makers-are-breaking-your-favorite-apps-with-reckless-changes-to-androids-power-optimization-features/).

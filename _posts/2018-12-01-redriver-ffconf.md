@@ -3,7 +3,6 @@ title: '4 things I learned at ffconf 2018'
 credit: 'Seb Lee-Delisle (CC BY-NC-ND 2.0)'
 credit_url: https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/
 coverImage: '/assets/blog/2018-12-01-redriver-ffconf/cover.webp'
-date: '2018-12-01T00:00:00.000Z'
 ---
 
 Back in November I had the privilege of attending my third FFConf. For those who don't know, [FFConf](https://2018.ffconf.org/) is an annual conference focused on the bleeding edge of front-end development. It's held in Brighton, England and is led by veteran developer [Remy Sharp](https://remysharp.com/) of JSbin and nodemon fame. It's a great insight into the future of the web thanks to the diverse range of speakers and topics. Here are some of my take aways from this year's conference.

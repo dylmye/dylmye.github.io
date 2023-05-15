@@ -1,7 +1,6 @@
 ---
 title: 'Licence To Page - What I learned from Pagerduty Connect: London'
 coverImage: '/assets/blog/2019-06-19-pagerduty-conf/cover.webp'
-date: '2019-06-19T00:00:00.000Z'
 ---
 
 I've just come back from [PagerDuty's London conference](https://meet.pagerduty.com/connect-london), and surprisingly I learned a lot. I say I'm suprised and that's because I've never used PagerDuty or any other incident response software.
