@@ -13,7 +13,7 @@ import Post from "../interfaces/post";
 import Card from "../components/card";
 import Container from "../components/container";
 import Layout from "../components/layout";
-import Unit from "../components/unit";
+import HomepageUnit from "../components/homepage-unit";
 import UnitsVerticalList from "../components/units-vertical-list";
 import PortfolioPost from "../interfaces/portfolio-post";
 import DateFormatter from "../components/date-formatter";
@@ -74,8 +74,8 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
         <UnitsVerticalList>
           {devPosts?.length > 0 &&
             devPosts.map((d) => (
-              <Unit
-                key={d.slug}
+              <HomepageUnit
+                key={`homepage-devpost-${d.slug}`}
                 title={d.title}
                 description={d.summary}
                 image={d.image}
@@ -90,8 +90,8 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
         <UnitsVerticalList>
           {communityPosts?.length > 0 &&
             communityPosts.map((c) => (
-              <Unit
-                key={c.slug}
+              <HomepageUnit
+                key={`homepage-devpost-${c.slug}`}
                 title={c.title}
                 description={c.summary}
                 image={c.image}
@@ -102,12 +102,12 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
         </UnitsVerticalList>
       </Card>
       <Card>
-        <CardHeader title="Blog" readMoreUrl="aa" />
+        <CardHeader title="Blog" readMoreUrl="posts/" />
         <UnitsVerticalList>
           {allPosts?.length > 0 &&
             allPosts.map((p) => (
-              <Unit
-                key={p.slug}
+              <HomepageUnit
+                key={`homepage-devpost-${p.slug}`}
                 title={p.title}
                 description={<DateFormatter dateString={p.date} />}
                 image={p.coverImage}

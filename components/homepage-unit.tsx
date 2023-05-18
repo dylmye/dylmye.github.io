@@ -12,7 +12,7 @@ interface UnitProps {
 }
 
 /** A unit that lives inside a [`<Card />`](./Card.tsx), or a [`<UnitsVerticalList />`](./UnitsVerticalList.tsx) */
-const Unit = ({
+const HomepageUnit = ({
   extraClasses = "",
   title,
   description,
@@ -39,9 +39,9 @@ const Unit = ({
     )}
     <div className="flex flex-col p-4">
       {title && <p className="font-bold text-m">{title}</p>}
-      {description && <p className="text-s">{description}</p>}
+      {description && <p className="text-sm">{description}</p>}
     </div>
   </Link>
 );
 
-export default Unit;
+export default HomepageUnit;

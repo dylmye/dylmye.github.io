@@ -5,7 +5,7 @@ interface UnitsVLProps {
   extraClasses?: string;
 }
 
-/** A vertical, overflow-handling list intended for one or more [`<Unit />`](./unit.tsx)s */
+/** A vertical, overflow-handling list intended for one or more Units */
 const UnitsVerticalList = ({ children, extraClasses = "" }: UnitsVLProps) => (
   <div
     className={`grid gap-2 grid-flow-col auto-cols-max overflow-x-auto scrollbar scrollbar-thumb-dylan-lighternavy scrollbar-track-dylan-navy scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg pb-2 ${extraClasses}`}
