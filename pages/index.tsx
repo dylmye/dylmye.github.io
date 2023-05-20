@@ -124,21 +124,21 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
 export const getStaticProps = async () => {
   const allPosts = getPaginatedPosts(["title", "date", "slug", "coverImage"]);
 
-  const devPosts = getAllPortfolioPosts("dev", [
+  const devPosts = getAllPortfolioPosts([
     "title",
     "date",
     "slug",
     "summary",
     "image",
-  ]);
+  ], "dev");
 
-  const communityPosts = getAllPortfolioPosts("community", [
+  const communityPosts = getAllPortfolioPosts([
     "title",
     "date",
     "slug",
     "summary",
     "image",
-  ]);
+  ], "community");
 
   return {
     props: { allPosts, devPosts, communityPosts },

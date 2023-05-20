@@ -5,9 +5,10 @@ import PostTitle from "./post-title";
 interface Props {
   title: string;
   coverImage?: string;
-  date: string;
+  date?: string;
   hackernoonUrl?: string;
   rrBlogUrl?: string;
+  centeredHeader?: boolean;
 }
 
 const PostHeader = ({
@@ -16,9 +17,10 @@ const PostHeader = ({
   date,
   hackernoonUrl,
   rrBlogUrl,
+  centeredHeader = false,
 }: Props) => (
   <>
-    <PostTitle>{title}</PostTitle>
+    <PostTitle centered={centeredHeader}>{title}</PostTitle>
     {coverImage && (
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImage title={title} src={coverImage} />
@@ -27,7 +29,7 @@ const PostHeader = ({
     <div className="max-w-2xl mx-auto">
       <div className="mb-6 text-lg">
         <strong>
-        <DateFormatter dateString={date} dateFormat="PPP" />
+        {date && <DateFormatter dateString={date} dateFormat="PPP" />}
         {hackernoonUrl && (
           <span>
             {" "}

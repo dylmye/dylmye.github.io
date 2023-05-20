@@ -5,18 +5,18 @@ import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { getPostBySlug, getAllPosts, getAllPortfolioPosts, getPortfolioPostBySlug } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
-import type Post from "../../interfaces/post";
+import type PostType from "../../interfaces/post";
 import { HOME_OG_IMAGE_URL } from "../../lib/constants";
 
 interface Props {
-  post: Post;
+  post: PostType;
 }
 
-const BlogPost = ({ post }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
   const origin =
     typeof window !== "undefined" && window.location.origin
@@ -51,10 +51,7 @@ const BlogPost = ({ post }: Props) => {
             <Header />
             <PostHeader
               title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              hackernoonUrl={post.hackernoon_url}
-              rrBlogUrl={post.rr_blog_url}
+              centeredHeader
             />
             <PostBody content={post.content} />
           </article>
@@ -71,14 +68,10 @@ interface Params {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const post = getPortfolioPostBySlug(params.slug, null, [
     "title",
-    "date",
     "slug",
     "content",
-    "coverImage",
-    "hackernoon_url",
-    "rr_blog_url",
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -93,7 +86,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPortfolioPosts(["slug"]);
 
   return {
     paths: posts.map((post) => {
@@ -107,4 +100,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default BlogPost;
+export default Post;

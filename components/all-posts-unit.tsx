@@ -21,7 +21,7 @@ const AllPostsUnit = ({ post }: AllPostsUnitProps) => (
               alt={post.title}
               className="w-96 rounded-md"
               width="224"
-            height="126"
+              height="126"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPkE1WvBwABTgDLCdetEgAAAABJRU5ErkJggg=="
             />
