@@ -5,6 +5,8 @@ summary: 'An intuitive, offline-first webapp for travel planning, with extensive
 image: '/assets/portfolio/lets-plan-1.webp'
 ---
 
+🔗 **Visit**: [lets-plan.ninja](https://lets-plan.ninja)
+
 **The brief:** Over the course of 2022 I day-tripped across the UK to discover more about my country. To facilitate this travel I created an organiser, which eventually became Let's Plan. It needed to work offline and in poor data areas, but also sync across devices to allow me to create and access plans on my phone and computer. It also needed to be flexible: I had to book many types of transport and events with specific timings, but equally account for untimed and unplanned days/times.
 
 **The result:** I created a single-page application in React, using the MUI design system as a base for components and layout. I initially designed the website in Figma, ensuring to take into account accessibility, and mobile-first design. I made the decision to use Firebase services for functionality where I could: website hosting, (optional) user authentication, Firestore for storing trips, Cloud Functions for advanced functionality and Firebase Storage for image hosting. Firebase offered exceptional free tier allocations that made this project economical, while turning no profit. To further save on costs, the app does not have a backend and instead relies on Firebase Security Rules for safety, and Cloud Functions for anything extra.

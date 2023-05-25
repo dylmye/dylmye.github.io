@@ -75,7 +75,6 @@ export const getPortfolioPostBySlug = (
   fields: string[] = []
 ): Record<string, string> => {
   const realSlug = slug.replace(/\.md$/, "");
-  console.log("sending slug", slug);
   const fullPath = join(
     portfolioDirectory(category ?? determineCategoryBySlug(slug)),
     `${realSlug}.md`
