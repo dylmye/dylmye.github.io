@@ -3,9 +3,9 @@ title: "Let's Plan"
 date: '2023-05-08T00:00:00.000Z'
 summary: 'An intuitive, offline-first webapp for travel planning, with extensive Firebase integration'
 image: '/assets/portfolio/lets-plan-1.webp'
+url: 'lets-plan.ninja'
+tags: ['react', 'typescript', 'firebase']
 ---
-
-🔗 **Visit**: [lets-plan.ninja](https://lets-plan.ninja)
 
 **The brief:** Over the course of 2022 I day-tripped across the UK to discover more about my country. To facilitate this travel I created an organiser, which eventually became Let's Plan. It needed to work offline and in poor data areas, but also sync across devices to allow me to create and access plans on my phone and computer. It also needed to be flexible: I had to book many types of transport and events with specific timings, but equally account for untimed and unplanned days/times.
 

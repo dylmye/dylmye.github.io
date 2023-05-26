@@ -5,15 +5,16 @@ import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts, getAllPortfolioPosts, getPortfolioPostBySlug } from "../../lib/api";
+import { getAllPortfolioPosts, getPortfolioPostBySlug } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
-import type PostType from "../../interfaces/post";
 import { HOME_OG_IMAGE_URL } from "../../lib/constants";
+import type PortfolioPost from "../../interfaces/portfolio-post";
+import PostTags from "../../components/post-tags";
 
 interface Props {
-  post: PostType;
+  post: PortfolioPost;
 }
 
 const Post = ({ post }: Props) => {
@@ -39,7 +40,7 @@ const Post = ({ post }: Props) => {
               <meta property="og:type" content="article" />
               <meta
                 property="og:image"
-                content={origin + post.coverImage ?? HOME_OG_IMAGE_URL}
+                content={origin + post.image ?? HOME_OG_IMAGE_URL}
               />
               <meta property="og:image:alt" content={post.title} />
               <meta property="og:image:type" content="image/webp" />
@@ -51,8 +52,14 @@ const Post = ({ post }: Props) => {
             <Header />
             <PostHeader
               title={post.title}
+              portfolioUrl={post.url ?? post.githubUrl}
               centeredHeader
             />
+            {post.tags && (
+              <div className="flex justify-center">
+                <PostTags tags={post.tags} />
+              </div>
+            )}
             <PostBody content={post.content} />
           </article>
         )}
@@ -72,6 +79,8 @@ export async function getStaticProps({ params }: Params) {
     "title",
     "slug",
     "content",
+    "image",
+    "tags",
   ]);
   const content = await markdownToHtml(post.content || "");
 

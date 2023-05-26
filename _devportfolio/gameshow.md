@@ -3,6 +3,7 @@ title: "Game Show Voting Platform"
 date: '2023-03-01T00:00:00.000Z'
 summary: 'Full-stack platform for an online gameshow delivered on a tight deadline'
 image: '/assets/portfolio/gameshow-1.webp'
+tags: ['react', 'typescript', 'aws', 'terraform']
 ---
 
 **The brief:** The client was planning to run a reality show among a group of friends, over the internet. Based on the show [_The Circle_](https://en.wikipedia.org/wiki/The_Circle_(franchise)) (itself based on a novel by Dave Eggers), a key requirement for the client was the ability to send contestants questions and allow them to rank each other. The platform needed to be intuitive to use, require no special setup for clients, and provide as high as possible reliance to ensure the game goes smoothly. The deadline for the project was tight, at two weeks.
@@ -13,13 +14,11 @@ image: '/assets/portfolio/gameshow-1.webp'
 
 I built an interface quickly by using [Vite tooling](https://vitejs.dev/), with a React + TypeScript template. This enabled me to worry less about the setup and infrastructure of the front-end and work on the features instead.
 
-SCREENSHOT-ONE-HERE
+![The homepage is primarily made up of the form.](/assets/portfolio/gameshow-1.webp)
 
 To interface the API and persist data over tabs and sessions, I used [Redux Toolkit](https://redux-toolkit.js.org/) (RTK.) RTK is built on top of the state management tool Redux, and offers a tool called _Query_ that abstracts over the difficulties of fetching, storing and cache managing API requests. Using RTK Query saved time in development by providing strongly typed interfaces for APIs without the setup time that [tRPC](https://trpc.io/) requires, and provided advanced functionality required like polling.
 
 I built form functionality using [React Final Form](https://final-form.org/react) and the interface is based on [Material UI (MUI)](https://mui.com/). Other tools used include Atlassian's [Beautiful D'n'D](https://github.com/atlassian/react-beautiful-dnd), used to create drag-n-drop list forms, and [dayjs](https://day.js.org/) for date formatting and manipulation.
-
-VIDEO-OF-DND-HERE
 
 ## API
 

@@ -8,6 +8,7 @@ interface Props {
   date?: string;
   hackernoonUrl?: string;
   rrBlogUrl?: string;
+  portfolioUrl?: string;
   centeredHeader?: boolean;
 }
 
@@ -17,6 +18,7 @@ const PostHeader = ({
   date,
   hackernoonUrl,
   rrBlogUrl,
+  portfolioUrl,
   centeredHeader = false,
 }: Props) => (
   <>
@@ -46,6 +48,12 @@ const PostHeader = ({
             <a target="_blank" href={rrBlogUrl}>
               Red River blog
             </a>
+          </span>
+        )}
+        {portfolioUrl && (
+          <span>
+            🔗 **Visit**:{" "}
+            <a target="_blank" href={`https://${portfolioUrl}`}>{portfolioUrl}</a>
           </span>
         )}
         </strong>

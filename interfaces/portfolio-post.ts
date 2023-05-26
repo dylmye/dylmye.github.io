@@ -1,3 +1,5 @@
+import { PortfolioTags } from "./tags";
+
 interface PortfolioPostType {
   slug: string;
   title: string;
@@ -7,6 +9,7 @@ interface PortfolioPostType {
   image?: string;
   githubUrl?: string;
   url?: string;
+  tags: PortfolioTags[];
 };
 
 export default PortfolioPostType;
