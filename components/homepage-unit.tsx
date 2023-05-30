@@ -38,8 +38,8 @@ const HomepageUnit = ({
       />
     )}
     <div className="flex flex-col p-4">
-      {title && <p className="font-bold text-m">{title}</p>}
-      {description && <p className="text-sm">{description}</p>}
+      {title && <p className="font-bold text-m dark:text-white">{title}</p>}
+      {description && <p className="text-sm dark:text-white">{description}</p>}
     </div>
   </Link>
 );

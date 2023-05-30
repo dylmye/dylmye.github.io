@@ -6,8 +6,10 @@ import {
   SiDiscord,
   SiFirebase,
   SiGooglechrome,
+  SiJavascript,
   SiReact,
   SiTerraform,
+  SiTwitch,
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
 
@@ -47,6 +49,14 @@ const getIconForTag = (tag: Tags): JSX.Element => {
     }
     case "firebase": {
       IconElement = SiFirebase;
+      break;
+    }
+    case "twitch": {
+      IconElement = SiTwitch;
+      break;
+    }
+    case "javascript": {
+      IconElement = SiJavascript;
       break;
     }
   }

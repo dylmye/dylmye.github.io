@@ -48,22 +48,22 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
             </h2>
             <div className="grid gap-1 grid-flow-col auto-cols-max">
               <SocialButton url="https://github.com/dylmye" title="My GitHub profile">
-                <SiGithub size={24} title="" />
+                <SiGithub size={24} title="" aria-hidden />
               </SocialButton>
               <SocialButton url="https://www.linkedin.com/in/dylan--m/" title="My LinkedIn account">
-                <SiLinkedin size={24} title="" />
+                <SiLinkedin size={24} title="" aria-hidden />
               </SocialButton>
               <SocialButton url="https://stackoverflow.com/users/2710385" title="My Stack Overflow profile">
-                <SiStackoverflow size={24} title="" />
+                <SiStackoverflow size={24} title="" aria-hidden />
               </SocialButton>
               <SocialButton url="https://infosec.exchange/@dylan" title="My Mastodon account">
-                <SiMastodon size={24} title="" />
+                <SiMastodon size={24} title="" aria-hidden />
               </SocialButton>
               <SocialButton url="https://mailhide.io/e/8KxEiUWX" title="My email address">
-                <EnvelopeIcon className="h-[24px] w-[24px]" />
+                <EnvelopeIcon className="h-[24px] w-[24px]" aria-hidden />
               </SocialButton>
               <SocialButton url="https://dylmye.me/feed.xml" title="RSS Feed">
-                <RssIcon className="h-[24px] w-[24px]" />
+                <RssIcon className="h-[24px] w-[24px]" aria-hidden />
               </SocialButton>
             </div>
           </div>

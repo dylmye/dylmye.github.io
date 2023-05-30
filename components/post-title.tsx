@@ -7,7 +7,7 @@ interface Props {
 
 const PostTitle = ({ children, centered = false }: Props) => {
   return (
-    <h1 className={`text-5xl md:text-7xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center ${!centered && "md:text-left"}`}>
+    <h1 className={`text-5xl md:text-7xl font-bold tracking-tighter leading-tight md:leading-none mb-8 text-center ${!centered && "md:text-left"}`}>
       {children}
     </h1>
   );

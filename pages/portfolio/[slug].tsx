@@ -53,13 +53,9 @@ const Post = ({ post }: Props) => {
             <PostHeader
               title={post.title}
               portfolioUrl={post.url ?? post.githubUrl}
+              tags={post.tags}
               centeredHeader
             />
-            {post.tags && (
-              <div className="flex justify-center">
-                <PostTags tags={post.tags} />
-              </div>
-            )}
             <PostBody content={post.content} />
           </article>
         )}
@@ -81,6 +77,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "image",
     "tags",
+    "url",
   ]);
   const content = await markdownToHtml(post.content || "");
 
