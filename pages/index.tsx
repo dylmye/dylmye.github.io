@@ -38,11 +38,11 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
           <Image
             src={profilePic}
             alt="A headshot of me"
-            className="rounded-full w-64 h-64"
+            className="rounded-full w-48 h-48 sm:w-64 sm:h-64"
           />
           <div className="mx-6 flex flex-col">
-            <h2 className="text-6xl font-bold mb-2">Dylan Myers</h2>
-            <h2 className="text-3xl font-bold mb-2">
+            <h2 className="text-5xl sm:text-6xl font-bold mb-2">Dylan Myers</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">
               Full-stack software engineer specialising in React & React Native,
               Typescript, design and accessibility
             </h2>

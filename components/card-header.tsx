@@ -9,7 +9,7 @@ interface CardHeaderProps {
 
 const CardHeader = ({ title, readMoreUrl }: CardHeaderProps) => (
   <div className="flex justify-between mb-4 whitespace-nowrap">
-    <h2 className="text-2xl font-bold text-ellipsis overflow-hidden">
+    <h2 className="text-xl sm:text-2xl font-bold text-ellipsis overflow-hidden">
       {title}
     </h2>
     {readMoreUrl && (
