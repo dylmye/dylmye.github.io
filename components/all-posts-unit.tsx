@@ -12,7 +12,7 @@ interface AllPostsUnitProps {
 
 const AllPostsUnit = ({ post }: AllPostsUnitProps) => (
   <Link href={`posts/${post.slug}`} className="no-underline">
-    <Card extraClasses="drop-shadow-md hover:drop-shadow-lg">
+    <Card extraClasses="drop-shadow-md hover:drop-shadow-lg" noMargin>
       <div className="flex flex-row items-center">
         {post.coverImage && (
           <div className="flex flex-1">

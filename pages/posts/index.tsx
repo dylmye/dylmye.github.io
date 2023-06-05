@@ -18,10 +18,15 @@ const AllPosts = ({ allPosts }: AllPostsProps) => (
     </Head>
     <Container>
       <Header />
-      <main className="grid grid-flow-row gap-2 grid-cols-1 md:grid-cols-2">
-        {allPosts.map(p => (
-          <AllPostsUnit key={`allposts-post-${p.slug}`} post={p} />
-        ))}
+      <main>
+        <h3 className="text-xl md:text-3xl font-bold tracking-tight md:tracking-tighter leading-tight mb-4">
+          All Posts
+        </h3>
+        <div className="grid grid-flow-row gap-3 grid-cols-1 md:grid-cols-2">
+          {allPosts.map((p) => (
+            <AllPostsUnit key={`allposts-post-${p.slug}`} post={p} />
+          ))}
+        </div>
       </main>
     </Container>
   </Layout>
