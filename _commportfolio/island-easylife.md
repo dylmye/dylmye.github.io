@@ -9,8 +9,7 @@ In late 2022, I worked with [Island Records](https://www.islandrecords.co.uk/) (
 
 I worked with the label and social media agency to help integrate the Discord community as a core part of the band's social media strategy, increasing fan loyalty and engagement. Merchandise and ticket sales also increased with the success of Discord marketing strategies. As part of the MIAL release, the band launched a Discord-exclusive limited variant of the album, on a USB drive. This release was especially popular with the community's dedicated fan core.
 
-> QUOTE FROM SAM
-
+> Dylan has been instrumental in creating, growing and maintaining our Discord server. He helps keep our members engaged through creative uses of bots and features and events alongside our album campaign schedule.
 
 **- Sam Hewitt, Easy Life**
 
