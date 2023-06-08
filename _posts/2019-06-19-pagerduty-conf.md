@@ -1,13 +1,6 @@
 ---
-title: "Licence To Page - What I learned from Pagerduty Connect: London"
-published: true
-post_id: "0007"
-categories: ["Tech"]
-credit: Dylan Myers
-
-# atom tags
-author: dylan
-image: "/assets/img/posts/0007.webp"
+title: 'Licence To Page - What I learned from Pagerduty Connect: London'
+coverImage: '/assets/blog/2019-06-19-pagerduty-conf/cover.webp'
 ---
 
 I've just come back from [PagerDuty's London conference](https://meet.pagerduty.com/connect-london), and surprisingly I learned a lot. I say I'm suprised and that's because I've never used PagerDuty or any other incident response software.
@@ -16,7 +9,7 @@ For the uninitiated, PagerDuty is a service that specialises in "incident respon
 
 Georgina Owens, Director of IT at [DAZN](https://dazngroup.com/) (A digital-first sports broadcaster) led a really captivating talk, showing us how insane their setup is and how they set up incident management. DAZN broadcast sports in multiple regions in a range of timezones which means if there's an issue at any time of day or night, _enough people_ will notice. When it comes to sport, paying fans can get very upset if there's any interruptions, meaning DAZN in particular needed to build a good experience.
 
-{% include post_image.html name="dazn-architecture" ext=".webp" alt="A big flow chart describing DAZN's high level system architecture" caption="A high level of DAZN's infrastructure. It's a lot." %}
+![A high level of DAZN's infrastructure. It's a lot.](/assets/blog/2019-06-19-pagerduty-conf/dazn-architecture.webp)
 
 DAZN use [Terraform to manage their Pagerduty configuration](https://www.pagerduty.com/resources/webinar/scale-infrastructure-using-terraform-2/), something I still don't really understand, but apparently it provides them with more flexibility. DAZN worked with PagerDuty to implement what is known as the ["HybridOps" model](https://www.pagerduty.com/blog/what-is-hybridops/). Essentially, it entails proactively monitoring services (that have been broken down from a monolitic codebase into separate instances) and using these signals to orchestrate quick responses to issues as they arise. Primarily that means being able to tell a bunch of different systems (engineers over slack, a Jira ticket, or perhaps some system of record for auditing) that something's happening.
 
@@ -26,7 +19,7 @@ Similarly, Chris Evans, co-founder of [Monzo](https://monzo.com/about/), gave th
 
 The advice from Chris?
 
-{% include post_image.html name="monzo-conclusion" ext=".webp" alt="1. Shadow rotations to encourage learning. 2. Runbooks to document the undocumented. 3. People on-call when it makes sense for you." %}
+![1. Shadow rotations to encourage learning. 2. Runbooks to document the undocumented. 3. People on-call when it makes sense for you.](/assets/blog/2019-06-19-pagerduty-conf/monzo-conclusion.webp)
 
 We met with some lovely people from a number of vendors, including [Sumo Logic](https://www.sumologic.com/) and [New Relic](https://newrelic.com/), who kindly sponsored the cracking open bar "networking reception".
 

@@ -1,14 +1,8 @@
 ---
-title: "4 things I learned at ffconf 2018"
-published: true
-post_id: "0003"
-categories: ["Tech"]
-credit: "Seb Lee-Delisle (CC BY-NC-ND 2.0)"
-credit_url: "https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/"
-
-# atom tags
-author: dylan
-image: "/assets/img/posts/0003.webp"
+title: '4 things I learned at ffconf 2018'
+credit: 'Seb Lee-Delisle (CC BY-NC-ND 2.0)'
+credit_url: https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/
+coverImage: '/assets/blog/2018-12-01-redriver-ffconf/cover.webp'
 ---
 
 Back in November I had the privilege of attending my third FFConf. For those who don't know, [FFConf](https://2018.ffconf.org/) is an annual conference focused on the bleeding edge of front-end development. It's held in Brighton, England and is led by veteran developer [Remy Sharp](https://remysharp.com/) of JSbin and nodemon fame. It's a great insight into the future of the web thanks to the diverse range of speakers and topics. Here are some of my take aways from this year's conference.
@@ -27,7 +21,7 @@ Eleanor makes the good point that with libraries like [Tensorflow.js](https://me
 
 A good point Eleanor also made is that running ML client-side provides privacy benefits too, as potentially sensitive information won't leave the device while still providing value to the user. She then provided a demonstration of Tensorflow usage, including loading and training models, and using features like loss functions and layers:
 
-{% include post_image.html name="ffconf-tensorflowdemo" ext=".png" alt="A slide deck from the presentation, showing the code used to plot a polynomial regression." caption="Here we see Tensorflow.js plotting polynomial regression. (Credit: Elle Haproff / FFConf)" %}
+![Here we see Tensorflow.js plotting polynomial regression. (Credit: Elle Haproff / FFConf)](/assets/blog/2018-12-01-redriver-ffconf/ffconf-tensorflowdemo.png)
 
 I found this all very useful as someone who doesn't really dabble in AI. In my day to day work I'm developing applications that process business data, and applying ML to this data could provide really valuable insights to our clients.
 
@@ -37,13 +31,13 @@ While I work on greenfield applications a lot of the time (meaning I work on new
 
 The first new feature Willian mentioned regards the messy nature of Javascript's `this` keyword. The keyword previously has caused trouble when used in a function scope, acting differently in the browser vs. Node. Setting values on `this` inside a function in many conditions would actually set the value on the globally scoped `this`. Using the [`Function.prototype.bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind) method or [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) overcomes the problems this causes. But there is also now a proposal for a Bind operator (theme tune included):
 
-{% include post_image.html name="ffconf-bindop" ext=".png" alt="A screenshot from a slideshow with the text 'Bind Operator' and a drawing of Mega Man X" caption="The title card for the Bind Operator. (credit: Willian Martins / FFConf)" %}
+![The title card for the Bind Operator. (credit: Willian Martins / FFConf)](/assets/blog/2018-12-01-redriver-ffconf/ffconf-bindop.png)
 
 The operator is more elegant than the bind method and can be used in a binary or unary fashion. Personally while I don't use this functionality often, I can see how it can be very useful when the behaviour of `this` can be quite opaque in big and legacy codebases.
 
 Next Willian showcased the pipeline operator, again with some great artwork.
 
-{% include post_image.html name="ffconf-pipeop" ext=".png" alt="A screenshot from a slideshow with the text 'Pipe Operator' and a drawing of a superhero" caption="The title card for the Pipe Operator. (credit: Willian Martins / FFConf)" %}
+![The title card for the Pipe Operator. (credit: Willian Martins / FFConf)](/assets/blog/2018-12-01-redriver-ffconf/ffconf-pipeop.png)
 
 The pipeline operator looks a lot more beneficial for my every day use. Rather than wrapping variables in multiple functions, it provides a tidy way to apply a number of functions:
 
@@ -63,9 +57,9 @@ The proposal authors have also thought about the needs to provide extra params; 
 
 Personally, I'm really looking forward to this being implemented because it will tidy up a lot of code and replace a number of functions!
 
-Next, Willians introduced us all to partial application to partially apply parameters within a function call. To me it looks messy, but I can see how it could be useful. It reminds me of Python or CLI syntax.
+Next, Willian introduced us all to partial application to partially apply parameters within a function call. To me it looks messy, but I can see how it could be useful. It reminds me of Python or CLI syntax.
 
-{% include post_image.html name="ffconf-partialapply" ext=".png" alt="A screenshot from a slideshow with a code demonstration of partial application, showing how parameters of a function can fill a template string." caption="A demonstration of the partial application syntax for a template literal. (credit: Willian Martins / FFConf)" %}
+![A demonstration of the partial application syntax for a template literal. (credit: Willian Martins / FFConf)](/assets/blog/2018-12-01-redriver-ffconf/ffconf-partialapply.png)
 
 Finally, the spread token allows developers to pass all (or the rest) of a set of values as a parameter. For example, if I want to get an object of all props except some specific ones, I could write:
 
@@ -95,7 +89,7 @@ Remy showed us how, even with all the fancy technology available for website dev
 
 Using APIs like the [oscillator node](https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createOscillator) and the deprecated [script processor](https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode), Remy made a script that makes audio of web pages and loads it in the way a Sinclair ZX Spectrum would, which is a questionable goal. It was a good deep dive into audio processing APIs and binary handling.
 
-## 4. You can do anything with Canvas
+## 4. You can do anything with `<canvas />`
 
 To cap it all off, [Tim Holman](https://twitter.com/twholman) demonstrated his collection of ~~procrastination~~ spare time projects, like using Canvas to make the DVD logo screensaver hit the corner (if you know you know), and discussing how he uses them as a form of meditation. Tim also demos his procrastination corner named The Zen Zone, which looks great a good use of my lunch break.
 

@@ -1,14 +1,7 @@
 ---
-title: "LastPass’ Authenticator app is not secure [Updated]"
-published: true
-post_id: "0001"
-categories: ["Tech", "Investigations"]
-hide_figure: true
+title: 'LastPass’ Authenticator app is not secure [Updated]'
 hackernoon_url: https://hackernoon.com/lastpass-authenticator-app-is-not-secure-77b9743c3007
-excerpt: "I've found a really easy way to bypass the fingerprint/PIN authentication that protects all of your 2FA codes. The Android app, produced by LastPass, doesn't"
-
-# atom tags
-author: dylan
+coverImage: '/assets/blog/2017-12-24-lastpass-authenticator-is-not-secure/cover.webp'
 ---
 
 > **UPDATE: The issue has been fixed. Please see the end of the article.**
@@ -19,8 +12,7 @@ All you need is access to individual activities ("screens" of apps). You don't n
 
 The activity you need to access is `com.lastpass.authenticator.activities.SettingsActivity`:
 
-{% include post_image.html name="instructions" alt="Accessing the settings activity using Activity Launcher" caption="Accessing the settings activity using Activity Launcher" %}
-
+![Accessing the settings activity using Activity Launcher](/assets/blog/2017-12-24-lastpass-authenticator-is-not-secure/instructions.jpg)
 
 Open the settings activity and you'll see (surprise, surpise) the settings page. Pressing the back arrow in the top left (or your back arrow button) will bring you to the Main activity, where your 2FA codes lay. Notice how at no point you needed to provide your PIN/fingerprint to access this activity?
 

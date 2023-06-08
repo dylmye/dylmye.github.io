@@ -1,15 +1,9 @@
 ---
-title: "How useful is the BCS for graduates? More than you might think"
-published: true
-post_id: "0002"
-categories: ["Tech", "Apprenticeships"]
-credit: "Startup Stock Photos (via Pexels)"
-credit_url: "https://www.pexels.com/photo/7374"
+title: 'How useful is the BCS for graduates? More than you might think'
+credit: 'Startup Stock Photos (via Pexels)'
+credit_url: https://www.pexels.com/photo/7374
 rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
-
-# atom tags
-author: dylan
-image: "/assets/img/posts/0002.webp"
+coverImage: '/assets/blog/2018-03-01-redriver-bcs/cover.webp'
 ---
 
 **Last week I was invited by some fellow degree apprentices working at SSE to a [BCS (The Chartered Institute for IT)](http://www.bcs.org/) seminar. The aim of the talk was to give guidance to apprentices and graduates on advancing their career path, and the role which BCS could play in their careers.**
