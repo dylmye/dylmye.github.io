@@ -1,4 +1,6 @@
 name: GitHub Pages Production Deployment
+env:
+  NEXT_TELEMETRY_DISABLED: 1
 
 on:
   # Runs on pushes targeting the default branch

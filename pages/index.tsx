@@ -20,6 +20,7 @@ import DateFormatter from "../components/date-formatter";
 import CardHeader from "../components/card-header";
 import profilePic from "../public/assets/img/profile.jpg";
 import SocialButton from "../components/social-button";
+import { HOME_OG_IMAGE_URL } from "../lib/constants";
 
 interface HomepageProps {
   allPosts: Post[];
@@ -31,6 +32,11 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
   <Layout>
     <Head>
       <title>Homepage | Dylan Myers</title>
+      <meta property="og:title" content="Dylan Myers" />
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image:type" content="image/webp" />
+      <meta property="og:image:width" content="1920" />
+      <meta property="og:image:height" content="1080" />
     </Head>
     <Container>
       <Card extraClasses="mt-8">
