@@ -46,6 +46,7 @@ const BlogPost = ({ post }: Props) => {
               <meta property="og:image:type" content="image/webp" />
               <meta property="og:image:width" content="1920" />
               <meta property="og:image:height" content="1080" />
+              <meta name="twitter:card" content="summary_large_image" />
               <meta property="article:author" content="Dylan Myers" />
               <meta property="article:published_time" content={post.date} />
             </Head>
