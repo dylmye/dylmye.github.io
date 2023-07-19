@@ -29,7 +29,8 @@ const Meta = () => {
       <meta name="msapplication-TileColor" content="#1f2e54" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#1f2e54" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <link rel="alternate" type="application/atom+xml" href="/feed.atom" />
+      <link rel="alternate" type="application/feed+json" href="/feed.json" />
 
       <meta property="og:locale" content="en_GB" />
       <meta property="og:site_name" content="Dylan Myers" />

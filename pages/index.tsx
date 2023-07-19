@@ -21,6 +21,7 @@ import CardHeader from "../components/card-header";
 import profilePic from "../public/assets/img/profile.jpg";
 import SocialButton from "../components/social-button";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
+import generateAtomFeed from "../lib/generateAtomFeed";
 
 interface HomepageProps {
   allPosts: Post[];
@@ -129,6 +130,7 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
 );
 
 export const getStaticProps = async () => {
+  await generateAtomFeed();
   const allPosts = getPaginatedPosts(["title", "date", "slug", "coverImage"]);
 
   const devPosts = getAllPortfolioPosts([

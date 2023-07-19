@@ -68,7 +68,7 @@ Clicking the 'Add' button at the bottom should then redirect you to a view like 
 That "API endpoint" URL is what you need for the final step.
 
 Head over to [Superfeedr](https://superfeedr.com), a service that checks feeds using that "WebSub" technology we talked about before. Create an account as a subscriber, then set up a new subscription. The topic URL is `
-https://www.youtube.com/feeds/videos.xml?channel_id=` + the channel ID you made earlier (told you it'd come in handy!). The callback URL is the Lambda API endpoint URL. Finally, set the subscription format to "atom" (basically RSS.) THe form should look like this:
+https://www.youtube.com/feeds/videos.xml?channel_id=` + the channel ID you made earlier (told you it'd come in handy!). The callback URL is the Lambda API endpoint URL. Finally, set the subscription format to "atom" (basically RSS.) The form should look like this:
 
 ![A screenshot of the setup dialog for Superfeedr, with fields filled as detailed above](/assets/blog/2022-08-22-youtube-discord/lambda-superfeedr-setup.png)
 
