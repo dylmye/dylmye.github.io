@@ -3,7 +3,7 @@ import { Feed } from "feed";
 import { getAllPosts } from "./api";
 import markdownToHtml from "./markdownToHtml";
 
-const generateAtomFeed = async () => {
+const generateFeeds = async () => {
   const posts = getAllPosts(["title", "date", "slug", "coverImage", "content"]);
 
   const updatedDate = posts[0].date;
@@ -42,8 +42,8 @@ const generateAtomFeed = async () => {
     });
   }
 
-  fs.writeFileSync("./public/feed.atom", feed.atom1());
+  fs.writeFileSync("./public/feed.rss", feed.rss2());
   fs.writeFileSync("./public/feed.json", feed.json1());
 };
 
-export default generateAtomFeed;
+export default generateFeeds;
