@@ -18,7 +18,7 @@ import UnitsVerticalList from "../components/units-vertical-list";
 import PortfolioPost from "../interfaces/portfolio-post";
 import DateFormatter from "../components/date-formatter";
 import CardHeader from "../components/card-header";
-import profilePic from "../public/assets/img/profile.jpg";
+import profilePic from "../public/assets/img/profile.webp";
 import SocialButton from "../components/social-button";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
 import generateFeeds from "../lib/generateFeeds";
@@ -33,6 +33,7 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
   <Layout>
     <Head>
       <title>Homepage | Dylan Myers</title>
+      <meta name="description" content="Dylan Myers is a full-stack software engineer specialising in React & React Native, Typescript, design and accessibility."></meta>
       <meta property="og:title" content="Dylan Myers" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <meta property="og:image:type" content="image/webp" />
@@ -110,7 +111,7 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
         </UnitsVerticalList>
       </Card>
       <Card>
-        <CardHeader title="Blog" readMoreUrl="posts/" />
+        <CardHeader title="Blog" readMoreUrl="posts/" readMoreText="More Posts" />
         <UnitsVerticalList>
           {allPosts?.length > 0 &&
             allPosts.map((p) => (
