@@ -1,5 +1,5 @@
 import React from "react";
-import { PortfolioTags, PostTags } from "../interfaces/tags";
+import { PortfolioTags, PostTags as PostTagsType } from "../interfaces/tags";
 import {
   IconType,
   SiAmazonaws,
@@ -13,7 +13,7 @@ import {
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
 
-type Tags = PortfolioTags | PostTags;
+type Tags = PortfolioTags | PostTagsType;
 
 interface PostTagsProps {
   tags: Tags[];

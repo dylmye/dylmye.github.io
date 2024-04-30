@@ -33,7 +33,7 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
   <Layout>
     <Head>
       <title>Homepage | Dylan Myers</title>
-      <meta name="description" content="Dylan Myers is a full-stack software engineer specialising in React & React Native, Typescript, design and accessibility."></meta>
+      <meta name="description" content="Dylan Myers is a full-stack software engineer specialising in React & React Native, TypeScript, design and accessibility."></meta>
       <meta property="og:title" content="Dylan Myers" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <meta property="og:image:type" content="image/webp" />
@@ -48,31 +48,32 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
             src={profilePic}
             alt="A headshot of me"
             className="rounded-full w-48 h-48 sm:w-64 sm:h-64"
+            priority
           />
           <div className="mx-6 flex flex-col">
             <h2 className="text-5xl sm:text-6xl font-bold mb-2">Dylan Myers</h2>
             <h2 className="text-2xl sm:text-3xl font-bold mb-2">
               Full-stack software engineer specialising in React & React Native,
-              Typescript, design and accessibility
+              TypeScript, design and accessibility
             </h2>
             <div className="grid gap-1 grid-flow-col auto-cols-max">
               <SocialButton url="https://github.com/dylmye" title="My GitHub profile">
-                <SiGithub size={24} title="" aria-hidden />
+                <SiGithub size={24} title="My GitHub profile" aria-hidden />
               </SocialButton>
               <SocialButton url="https://www.linkedin.com/in/dylan--m/" title="My LinkedIn account">
-                <SiLinkedin size={24} title="" aria-hidden />
+                <SiLinkedin size={24} title="My LinkedIn account" aria-hidden />
               </SocialButton>
               <SocialButton url="https://stackoverflow.com/users/2710385" title="My Stack Overflow profile">
-                <SiStackoverflow size={24} title="" aria-hidden />
+                <SiStackoverflow size={24} title="My Stack Overflow profile" aria-hidden />
               </SocialButton>
               <SocialButton url="https://infosec.exchange/@dylan" title="My Mastodon account">
-                <SiMastodon size={24} title="" aria-hidden />
+                <SiMastodon size={24} title="My Mastodon account" aria-hidden />
               </SocialButton>
               <SocialButton url="https://mailhide.io/e/8KxEiUWX" title="My email address">
-                <EnvelopeIcon className="h-[24px] w-[24px]" aria-hidden />
+                <EnvelopeIcon className="h-[24px] w-[24px]" title="My email address" aria-hidden />
               </SocialButton>
-              <SocialButton url="https://dylmye.me/feed.xml" title="RSS Feed">
-                <RssIcon className="h-[24px] w-[24px]" aria-hidden />
+              <SocialButton url="https://dylmye.me/feed.rss" title="RSS Feed">
+                <RssIcon className="h-[24px] w-[24px]" title="RSS Feed" aria-hidden />
               </SocialButton>
             </div>
           </div>

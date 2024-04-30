@@ -11,12 +11,13 @@ const generateFeeds = async () => {
   const feed = new Feed({
     id: "https://dylmye.me",
     title: "Dylan Myers Blog",
+    description: "Dylan Myers is a full-stack software engineer specialising in React & React Native, TypeScript, design and accessibility.",
     updated: new Date(updatedDate),
     generator: "DN Gottem",
     language: "en-GB",
     feedLinks: {
       json: "https://dylmye.me/feed.json",
-      atom: "https://dylmye.me/feed.atom",
+      rss: "https://dylmye.me/feed.rss",
     },
     link: "https://dylmye.me",
     image: "https://dylmye.me/favicon/apple-touch-icon.png",
