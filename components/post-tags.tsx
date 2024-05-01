@@ -4,6 +4,7 @@ import {
   IconType,
   SiAmazonaws,
   SiDiscord,
+  SiExpo,
   SiFirebase,
   SiGooglechrome,
   SiJavascript,
@@ -57,6 +58,10 @@ const getIconForTag = (tag: Tags): JSX.Element => {
     }
     case "javascript": {
       IconElement = SiJavascript;
+      break;
+    }
+    case "expo": {
+      IconElement = SiExpo;
       break;
     }
   }
