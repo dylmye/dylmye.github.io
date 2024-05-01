@@ -12,6 +12,7 @@ const markdownToHtml = async (markdown: string): Promise<string> => {
   const result = await remark()
     .use(remarkParse)
     .use(remarkGfm)
+    // @ts-expect-error old plugin but it still works
     .use(remarkPrism, {
       transformInlineCode: false,
       plugins: ["line-numbers"],
