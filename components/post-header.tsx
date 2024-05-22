@@ -8,8 +8,14 @@ interface Props {
   title: string;
   coverImage?: string;
   date?: string;
+  /** HackerNoon URL */
   hackernoonUrl?: string;
-  rrBlogUrl?: string;
+  /** RR Blog URL */
+  legacyBlogUrl?: string;
+  /** Credit attribution for header image */
+  coverCredit?: string;
+  /** URL to link credit attribution to */
+  coverCreditUrl?: string;
   portfolioUrl?: string;
   centeredHeader?: boolean;
   tags?: (PostTagsType | PortfolioTags)[];
@@ -20,7 +26,9 @@ const PostHeader = ({
   coverImage,
   date,
   hackernoonUrl,
-  rrBlogUrl,
+  legacyBlogUrl,
+  coverCredit,
+  coverCreditUrl,
   portfolioUrl,
   centeredHeader = false,
   tags = [],
@@ -34,6 +42,18 @@ const PostHeader = ({
     )}
     <div className="max-w-2xl mx-auto">
       <div className="mb-6 text-lg">
+        {(coverCreditUrl || coverCredit) && (
+          <small>
+            {coverCreditUrl ? (
+              <a href={coverCreditUrl}>
+                ({coverCredit ? `Photo credit: ${coverCredit}` : "Photo credit"})
+              </a>
+            ) : (
+              `Photo credit: ${coverCredit}`
+            )}
+          </small>
+        )}
+        <br />
         <strong>
           {date && <DateFormatter dateString={date} dateFormat="PPP" />}
           {hackernoonUrl && (
@@ -45,11 +65,11 @@ const PostHeader = ({
               </a>
             </span>
           )}
-          {rrBlogUrl && (
+          {legacyBlogUrl && (
             <span>
               {" "}
               • Originally shared on the{" "}
-              <a target="_blank" href={rrBlogUrl}>
+              <a target="_blank" href={legacyBlogUrl}>
                 Red River blog
               </a>
             </span>

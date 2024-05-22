@@ -1,8 +1,8 @@
 ---
 title: 'How useful is the BCS for graduates? More than you might think'
-credit: 'Startup Stock Photos (via Pexels)'
-credit_url: https://www.pexels.com/photo/7374
-rr_blog_url: https://river.red/bcs-graduates-seminar-havant/
+coverCredit: 'Startup Stock Photos/Pexels'
+coverCreditUrl: https://www.pexels.com/photo/7374
+legacyBlogUrl: https://river.red/bcs-graduates-seminar-havant/
 coverImage: '/assets/blog/2018-03-01-redriver-bcs/cover.webp'
 ---
 

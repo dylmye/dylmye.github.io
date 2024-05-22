@@ -3,8 +3,10 @@ interface PostType {
   title: string;
   date: string;
   coverImage: string;
-  hackernoon_url?: string;
-  rr_blog_url?: string;
+  coverCredit?: string;
+  coverCreditUrl?: string;
+  hackernoonUrl?: string;
+  legacyBlogUrl?: string;
   content: string;
 };
 

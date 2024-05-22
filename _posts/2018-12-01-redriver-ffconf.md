@@ -1,7 +1,7 @@
 ---
 title: '4 things I learned at ffconf 2018'
-credit: 'Seb Lee-Delisle (CC BY-NC-ND 2.0)'
-credit_url: https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/
+coverCredit: 'Seb Lee-Delisle/CC BY-NC-ND 2.0'
+coverCreditUrl: https://www.flickr.com/photos/sebleedelisle/24461418388/in/album-72157666198229809/
 coverImage: '/assets/blog/2018-12-01-redriver-ffconf/cover.webp'
 ---
 

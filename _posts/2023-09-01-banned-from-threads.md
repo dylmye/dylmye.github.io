@@ -1,5 +1,8 @@
 ---
-title: 'Getting banned on Threads taught me a lesson'
+title: 'I loved Threads too much, and it taught me a lesson'
+coverImage: '/assets/blog/2023-09-01-banned-from-threads/cover.webp'
+coverCredit: 'Azamat E/Unsplash'
+coverCreditUrl: https://unsplash.com/photos/DwPp8l3mKec
 ---
 
 This post was originally intended to be a positive, optimistic take on Meta's social media platform Threads. I joined on day dot, number 45,375 of more than 100,000,000, keen to feel the energy I felt on Twitter before you-know-what.

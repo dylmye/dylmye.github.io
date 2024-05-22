@@ -55,8 +55,10 @@ const BlogPost = ({ post }: Props) => {
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
-              hackernoonUrl={post.hackernoon_url}
-              rrBlogUrl={post.rr_blog_url}
+              hackernoonUrl={post.hackernoonUrl}
+              legacyBlogUrl={post.legacyBlogUrl}
+              coverCredit={post.coverCredit}
+              coverCreditUrl={post.coverCreditUrl}
             />
             <PostBody content={post.content} />
           </article>
@@ -79,8 +81,10 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "content",
     "coverImage",
-    "hackernoon_url",
-    "rr_blog_url",
+    "hackernoonUrl",
+    "legacyBlogUrl",
+    "coverCredit",
+    "coverCreditUrl"
   ]);
   const content = await markdownToHtml(post.content || "");
 
