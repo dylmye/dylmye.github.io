@@ -1,6 +1,7 @@
 import React from "react";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 interface CardHeaderProps {
   title: string;
@@ -20,7 +21,7 @@ const CardHeader = ({
     {readMoreUrl && (
       <Link href={readMoreUrl} className="flex flex-row items-center">
         <p>{readMoreText}</p>
-        <ChevronRightIcon className="h-4 w-4 ml-1" />
+        <FontAwesomeIcon icon={faChevronRight} size="xs" className="ml-1" />
       </Link>
     )}
   </div>

@@ -40,7 +40,7 @@ const BlogPost = ({ post }: Props) => {
               <meta property="og:type" content="article" />
               <meta
                 property="og:image"
-                content={origin + post.coverImage ?? HOME_OG_IMAGE_URL}
+                content={origin + (post.coverImage ?? HOME_OG_IMAGE_URL)}
               />
               <meta property="og:image:alt" content={post.title} />
               <meta property="og:image:type" content="image/webp" />

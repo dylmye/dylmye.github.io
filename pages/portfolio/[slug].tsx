@@ -11,7 +11,6 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { HOME_OG_IMAGE_URL } from "../../lib/constants";
 import type PortfolioPost from "../../interfaces/portfolio-post";
-import PostTags from "../../components/post-tags";
 
 interface Props {
   post: PortfolioPost;
@@ -40,7 +39,7 @@ const Post = ({ post }: Props) => {
               <meta property="og:type" content="article" />
               <meta
                 property="og:image"
-                content={origin + post.image ?? HOME_OG_IMAGE_URL}
+                content={origin + (post.image ?? HOME_OG_IMAGE_URL)}
               />
               <meta property="og:image:alt" content={post.title} />
               <meta property="og:image:type" content="image/webp" />

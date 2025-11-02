@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Head from "next/head";
-import {
-  SiGithub,
-  SiMastodon,
-  SiLinkedin,
-  SiStackoverflow,
-} from "@icons-pack/react-simple-icons";
-import { EnvelopeIcon, RssIcon } from "@heroicons/react/24/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin, faMastodon, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faRss } from "@fortawesome/free-solid-svg-icons";
+import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import { getAllPortfolioPosts, getPaginatedPosts } from "../lib/api";
 import Post from "../interfaces/post";
@@ -28,6 +26,8 @@ interface HomepageProps {
   devPosts: PortfolioPost[];
   communityPosts: PortfolioPost[];
 }
+
+faConfig.autoAddCss = false
 
 const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
   <Layout>
@@ -58,22 +58,22 @@ const Homepage = ({ allPosts, devPosts, communityPosts }: HomepageProps) => (
             </h2>
             <div className="grid gap-1 grid-flow-col auto-cols-max">
               <SocialButton url="https://github.com/dylmye" title="My GitHub profile">
-                <SiGithub size={24} title="My GitHub profile" aria-hidden />
+                <FontAwesomeIcon icon={faGithub} size="xl" />
               </SocialButton>
               <SocialButton url="https://www.linkedin.com/in/dylan--m/" title="My LinkedIn account">
-                <SiLinkedin size={24} title="My LinkedIn account" aria-hidden />
+                <FontAwesomeIcon icon={faLinkedin} size="xl" />
               </SocialButton>
               <SocialButton url="https://stackoverflow.com/users/2710385" title="My Stack Overflow profile">
-                <SiStackoverflow size={24} title="My Stack Overflow profile" aria-hidden />
+                <FontAwesomeIcon icon={faStackOverflow} size="xl" />
               </SocialButton>
               <SocialButton url="https://infosec.exchange/@dylan" title="My Mastodon account">
-                <SiMastodon size={24} title="My Mastodon account" aria-hidden />
+                <FontAwesomeIcon icon={faMastodon} size="xl" />
               </SocialButton>
               <SocialButton url="https://mailhide.io/e/8KxEiUWX" title="My email address">
-                <EnvelopeIcon className="h-[24px] w-[24px]" title="My email address" aria-hidden />
+                <FontAwesomeIcon icon={faEnvelope} size="xl" />
               </SocialButton>
               <SocialButton url="https://dylmye.me/feed.rss" title="RSS Feed">
-                <RssIcon className="h-[24px] w-[24px]" title="RSS Feed" aria-hidden />
+                <FontAwesomeIcon icon={faRss} size="xl" />
               </SocialButton>
             </div>
           </div>

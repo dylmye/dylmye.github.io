@@ -1,14 +1,15 @@
 import React from "react";
 import { PortfolioTags, PostTags as PostTagsType } from "../interfaces/tags";
+// @TODO move to fontawesome when these are added: expo, firebase, serverless, terraform, typescript
 import {
   IconType,
-  SiAmazonaws,
   SiDiscord,
   SiExpo,
   SiFirebase,
   SiGooglechrome,
   SiJavascript,
   SiReact,
+  SiServerless,
   SiTerraform,
   SiTwitch,
   SiTypescript,
@@ -21,7 +22,7 @@ interface PostTagsProps {
   extraClasses?: string;
 }
 
-const getIconForTag = (tag: Tags): JSX.Element => {
+const getIconForTag = (tag: Tags): React.ReactElement => {
   let IconElement: IconType = null;
   switch (tag) {
     case "react": {
@@ -41,7 +42,7 @@ const getIconForTag = (tag: Tags): JSX.Element => {
       break;
     }
     case "aws": {
-      IconElement = SiAmazonaws;
+      IconElement = SiServerless;
       break;
     }
     case "front end": {
