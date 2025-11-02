@@ -1,7 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./components/**/*.tsx', './pages/**/*.tsx'],
   darkMode: 'class',
