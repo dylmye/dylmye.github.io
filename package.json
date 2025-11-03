@@ -51,7 +51,7 @@
     "wrangler": "^4.45.3"
   },
   "engines": {
-    "node": ">=22.19.0"
+    "node": ">=22.0.0"
   },
   "packageManager": "yarn@1.22.22",
   "resolutions": {
