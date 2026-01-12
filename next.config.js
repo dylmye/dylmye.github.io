@@ -5,8 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   images: {
-    loader: 'custom',
-    loaderFile: './imageLoader.ts'
+    // todo: enable when appropriate provider found
+    unoptimized: true
   }
 }
 
