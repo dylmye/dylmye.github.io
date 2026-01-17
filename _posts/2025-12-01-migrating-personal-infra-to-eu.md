@@ -1,6 +1,6 @@
 ---
 title: "I left the hyperscalers for Europe. It wasn't so simple."
-# coverImage: '/assets/blog/2024-09-12-best-hotdesking-toronto/cover.webp'
+coverImage: '/assets/blog/2026-01-17-migrating-personal-infra-to-eu/cover.webp'
 ---
 
 For me, the priority with hosting personal projects has always been to run them as cheaply as possible, because I don't monetise them (partly out of a lack of confidence but mostly because I don't need to). This naturally skews toward American offerings, with multiple variables leading to unbeatable prices - Hyperscalers earning higher margins on enterprise customers who are locked in, "free tier" pricing to entice developers to adopt platforms, high venture capital liquidity, etc. My monthly AWS bill is less than £0.50 a month, and I've never paid Cloudflare a penny. [Recent](https://www.stevefrenzel.dev/posts/i-moved-my-astro-websites-to-europe/) [incidents](https://news.ycombinator.com/item?id=45416353) and developments in the US legal environment (*gestures broadly at everything*) have given me the motivation to move my deployments closer to `/home`.
@@ -21,7 +21,7 @@ The main themes I found from my research are that:
 
 First, I took inventory of my digital estate, so to speak. I run a couple of static generated sites, including the one you're reading this on right now (fourth wall break!) and projects like [ISA Eye](https://isaeye.uk). Some of these sites make use of serverless compute, object storage (and a CDN fronting said storage), and more niche services like image optimisation. I turned this into a map:
 
-![A chart of the "before" infrastructure, made in draw.io.](/assets/blog/2025-12-01-migrating-personal-infra-to-eu/before-map.webp)
+![A chart of the "before" infrastructure, made in draw.io.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/before-map.webp)
 
 (Away from websites, I also self-host some apps for personal organisation. These are largely out of scope of this article.)
 
@@ -49,7 +49,7 @@ You'll also find that not everything is as it seems: I ended up abandoning multi
 
 Here's what I got up to over the Christmas break:
 
-![A chart of the "after" infrastructure, made in draw.io.](/assets/blog/2025-12-01-migrating-personal-infra-to-eu/after-map.webp)
+![A chart of the "after" infrastructure, made in draw.io.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/after-map.webp)
 
 Starting from the bottom up:
 
