@@ -15,15 +15,13 @@ The main themes I found from my research are that:
 
 - **There are great alternatives but they're all hosted in the US**: Render, Railway, Netlify, Sevalla and Sherpa.sh all have their benefits but they're out of the race
 - **The second best alternative is probably self-hosting on bare metal**: Reddit in particular loves Dokploy and Coolify
-- **The best European alternatives can be expensive**: Many services can't beat the American [loss leaders](https://truthonthemarket.com/2019/05/07/is-amazon-guilty-of-predatory-pricing/) or choose to target more profitable demographics (I can't blame 'em)
+- **The best European alternatives can be expensive**: Many services can't beat the American [loss leaders](https://truthonthemarket.com/2019/05/07/is-amazon-guilty-of-predatory-pricing/) or choose to target more profitable demographics (and I can't blame 'em)
 
 ## The requirements
 
 First, I took inventory of my digital estate, so to speak. I run a couple of static generated sites, including the one you're reading this on right now (fourth wall break!) and projects like [ISA Eye](https://isaeye.uk). Some of these sites make use of serverless compute, object storage (and a CDN fronting said storage), and more niche services like image optimisation. I turned this into a map:
 
-![A chart of the "before" infrastructure, made in draw.io.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/before-map.webp)
-
-(Away from websites, I also self-host some apps for personal organisation. These are largely out of scope of this article.)
+![A chart of the "before" infrastructure.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/before-map.webp)
 
 I distilled down my needs to these three guiding principles:
 
@@ -49,11 +47,11 @@ You'll also find that not everything is as it seems: I ended up abandoning multi
 
 Here's what I got up to over the Christmas break:
 
-![A chart of the "after" infrastructure, made in draw.io.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/after-map.webp)
+![A chart of the "after" infrastructure.](/assets/blog/2026-01-17-migrating-personal-infra-to-eu/after-map.webp)
 
 Starting from the bottom up:
 
-- **Domains registered with [QuickHostUK](https://www.quickhost.uk/)**: It might feel like eNom-partnered registrars are all the same, but QuickHost's edge is their fantastic customer experience. 24/7/365 technical support that don't baby you and an active Discord community made me feel at home. As you can tell from their name, the main business is UK-based web + VPS cloud hosting (and UK colo), however their domain product is far from a last-minute thought. I miss Porkbun in some ways, like managing your own DNSSEC and [this](https://porkbun.com/buniverse.html), however I have no regrets in supporting a great local business. Bonus points for a carbon neutral offering, too.
+- **Domains registered with [QuickHostUK](https://www.quickhost.uk/)**: It might feel like eNom-partnered registrars are all the same, but QuickHost truly stands out. Their edge is a fantastic customer experience. The 24/7/365 technical support that doesn't baby you and an active Discord community made me feel at home. As you can tell from their name, the main business is UK-based web + VPS cloud hosting (and UK colo), however their domain product is far from a last-minute thought. I miss Porkbun in some ways, like managing your own DNSSEC and [this](https://porkbun.com/buniverse.html), however I have no regrets in supporting a great local business. Bonus points for a carbon neutral offering, too.
 - **Managed DNS with [Gcore](https://gcore.com/)**: Cloudflare's 'proxy' DNS service provides DDoS protection, advanced caching and DNS-level analytics, alongside new feature offerings like [ALIAS records](https://dn.org/cname-cloaking-security-considerations-for-dns-aliases/). Gcore doesn't have quite the same level offering but it is a level above registrar-provided DNS in terms of DDoS protection and the user interface. Gcore is a less well-known PaaS from Luxembourg that originally focussed on services for the gaming industry but are truly fantastic whoever you are. They also have a generous free plan with access to a big network of PoPs, and all assets are Terraform-able. Their customer service isn't quick but they're not bad otherwise.
 - **Static hosting with [Statichost](https://www.statichost.eu/)**: It's more than a no-BS name, it's a no-BS service. A super simple interface that integrates as smooth as butter with most modern frameworks. It integrates just as easily with my repos as Vercel/Cloudflare Pages did, thanks to their webhooks. This is the most no-compromises solution I've used. Soon they're releasing preview URLs and their own CDN which is a true cherry on the top. Eric Selin, I salute you!
 - **App hosting with [Scaleway](https://www.scaleway.com/)**: This was the biggest struggle to replace. Scaleway's Serverless Container offering is a little less "one-click deploy" than Cloudflare Pages but [their Next.js tutorial](https://www.scaleway.com/en/docs/tutorials/hosting-nextjs-webapp-serverless-containers/) is quite short and reflective of how easy the process is. Scaleway is one of the best-known cloud providers in Europe. They're serious about their environmental impact, too. Bonus points for OpenTofu support.
