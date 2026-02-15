@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+const { src, alt } = Astro.props;
+---
+<style>
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block: 1rem;
+    }
+    figure img {
+        inline-size: auto;
+        block-size: auto;
+        max-block-size: 900px;
+    }
+    figure figcaption {
+        margin-block-start: 0.5rem;
+    }
+</style>
+<figure>
+    <Image src={src} alt={alt} />
+    {alt && <figcaption><small><em>{alt}</em></small></figcaption>}
+</figure>

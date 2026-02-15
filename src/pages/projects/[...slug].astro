@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import ItemHeading from "../../components/ItemHeading.astro";
+import ItemImageFigure from "../../components/ItemImageFigure.astro";
+import ItemOrderedList from "../../components/ItemOrderedList.astro";
+import ItemParagraph from "../../components/ItemParagraph.astro";
+import ItemUnorderedList from "../../components/ItemUnorderedList.astro";
+import ProjectPost from "../../layouts/projectPost.astro";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("projects");
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<"projects">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<ProjectPost {...post.data}>
+  <Content
+    components={{
+      h2: ItemHeading,
+      ol: ItemOrderedList,
+      ul: ItemUnorderedList,
+      img: ItemImageFigure,
+      p: ItemParagraph,
+    }}
+  />
+</ProjectPost>

@@ -1,0 +1,12 @@
+# perma redirect legacy blog post URLs
+
+/posts/2017-12-24-lastpass-authenticator-is-not-secure /blog/lastpass-authenticator-is-not-secure 301
+/posts/2018-03-01-redriver-bcs /blog/redriver-bcs 301
+/posts/2018-12-01-redriver-ffconf /blog/redriver-ffconf 301
+/posts/2019-05-09-aws-summit-2019 /blog/aws-summit-2019 301
+/posts/2019-06-19-pagerduty-conf /blog/pagerduty-conf 301
+/posts/2021-03-08-twitch-discord /blog/twitch-discord 301
+/posts/2022-08-22-youtube-discord /blog/youtube-discord 301
+/posts/2023-09-01-banned-from-threads /blog/banned-from-threads 301
+/posts/2024-09-12-best-hotdesking-toronto /blog/best-hotdesking-toronto 301
+/posts/2026-01-17-migrating-personal-infra-to-eu /blog/migrating-personal-infra-to-eu 301

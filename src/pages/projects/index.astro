@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import CollectionIndex from "../../layouts/collectionIndex.astro";
+import {
+	formatProject,
+	sortCollectionEntriesByDate,
+} from "../../utils/collections";
+
+const allProjects = await getCollection("projects");
+const postsData = allProjects
+	.sort(sortCollectionEntriesByDate)
+	.map(formatProject);
+---
+<CollectionIndex title="Projects" slug="projects" items={postsData} />

@@ -1,0 +1,45 @@
+---
+import { Font } from "astro:assets";
+import "../styles/reset.css";
+import "../styles/global.css";
+import type CollectionEntryBase from "../types/CollectionEntryBase";
+import DefaultHtmlHead from "./DefaultHtmlHead.astro";
+
+type Props = CollectionEntryBase & {
+	coverImage?: string;
+};
+
+const { title, blurb, coverImage, date } = Astro.props;
+
+const isoDate = new Date(date).toISOString();
+const metadataJson = JSON.stringify(
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: title,
+		description: blurb,
+		image: coverImage,
+		author: {
+			"@type": "Person",
+			name: "Dylan Myers",
+		},
+		datePublished: isoDate,
+		dateModified: isoDate,
+	},
+	null,
+	2,
+);
+---
+
+<DefaultHtmlHead />
+<title>{title} | Dylan Myers</title>
+<meta name="description" content={blurb} />
+<meta property="og:type" content="article">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={blurb}>
+<meta property="og:url" content={Astro.url.toString()}>
+<meta property="article:published_time" content={isoDate}>
+<meta property="article:author" content="Dylan Myers">
+{coverImage && <meta property="og:image" content={coverImage}>}
+
+<script is:inline type="application/ld+json" set:html={metadataJson} />

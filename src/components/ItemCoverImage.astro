@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+type Props = {
+	coverImage: ImageMetadata;
+	alt: string;
+	caption?: string;
+	captionUrl?: string;
+};
+
+const { coverImage, alt, caption, captionUrl } = Astro.props;
+---
+
+<style>
+  .hero {
+    inline-size: 75rem;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero img {
+    inline-size: 100%;
+    block-size: auto;
+  }
+</style>
+<figure class="hero">
+  <Image src={coverImage} alt={alt} loading="eager" />
+  {
+    caption && (
+      <figcaption>
+        <strong><small>{captionUrl ? <a href={captionUrl} target="_blank">Credit:</a> : "Credit:"}</small></strong> <small>{caption}</small>
+      </figcaption>
+    )
+  }
+</figure>

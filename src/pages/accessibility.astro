@@ -1,0 +1,31 @@
+---
+import Homepage from "../layouts/homepage.astro";
+---
+
+<Homepage>
+    <style>
+        main {
+          inline-size: 75rem;
+          max-inline-size: 100%;
+          margin: 0 auto;
+          font-size: 1.25rem;
+        }
+        h2 {
+            margin-block-end: 1rem;
+        }
+        p {
+            margin-block-end: 0.75rem;
+        }
+    </style>
+    <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
+    <main>
+        <h2>Accessibility Statement</h2>
+        <p>
+            I endeavour to provide the best possible experience for all users who happen upon my website. To the best of my knowledge, my website meets <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 standards, at AAA level. 
+        </p>
+        <p>
+            The exception to this is that I have used the <abbr title="Accessible Perceptual Contrast Algorithm">APCA</abbr> to measure text colour contrast. I have ensured that the text colours used on this website are readable using <a href="https://apcacontrast.com/" target="_blank">the official contrast checker</a> for the APCA. While we all wait for WCAG 3.0 to be released, I made this choice in advance due to <a href="https://tangledweb.xyz/whats-red-black-also-not-read-573b9c0a97ed" target="_blank">the deficiencies in the WCAG 2.0 colour contrast gudelines</a>.
+        </p>
+        <p>If you encounter any issues in using this website, please reach out to me <a href="https://mailhide.io/e/8KxEiUWX" target="_blank">by email</a>.</p>
+    </main>
+</Homepage>

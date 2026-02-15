@@ -1,0 +1,24 @@
+---
+import DefaultFooter from "../components/DefaultFooter.astro";
+import DefaultHtmlHead from "../components/DefaultHtmlHead.astro";
+import SharedLayout from "./sharedLayout.astro";
+---
+
+<SharedLayout>
+    <head>
+        <DefaultHtmlHead />
+        <title>Dylan Myers</title>
+        <meta name="description" content="Dylan is a London-based full-stack engineer with nearly a decade of experience in building performant, accessible and beautiful websites and apps." />
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Dylan Myers">
+        <meta property="og:description" content="Dylan is a London-based full-stack engineer with nearly a decade of experience in building performant, accessible and beautiful websites and apps.">
+        <meta property="og:url" content={Astro.url.toString()}>
+        <meta property="article:author" content="Dylan Myers">
+    </head>
+    <body>
+    <div id="root">
+        <slot />
+        <DefaultFooter />
+    </div>
+    </body>
+</SharedLayout>

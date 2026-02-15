@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ContentHtmlHead from "../components/ContentHtmlHead.astro";
+import DefaultFooter from "../components/DefaultFooter.astro";
+import ItemCoverImage from "../components/ItemCoverImage.astro";
+import SharedLayout from "./sharedLayout.astro";
+
+type Props = CollectionEntry<"communityMgmtPortfolio">["data"];
+
+const { title, year, coverImage, coverImageAlt } = Astro.props;
+
+const dateFormatter = Intl.DateTimeFormat("en-GB", { year: "numeric" });
+const date = new Date(year);
+const formattedDate = dateFormatter.format(date);
+---
+
+<SharedLayout>
+  <head>
+    <ContentHtmlHead {...Astro.props} date={date} coverImage={coverImage?.src} />
+  </head>
+  <body>
+    <div id="root">
+      <style>
+        h1,
+        h2 {
+          margin-block-end: 1rem;
+        }
+        h2 {
+          font-size: clamp(2rem, 2.5vw, 4rem);
+          text-align: center;
+          text-wrap: balance;
+          overflow-wrap: break-word;
+        }
+        main {
+          inline-size: 75rem;
+          max-inline-size: 100%;
+          margin: 0 auto;
+          font-size: 1.25rem;
+        }
+        .byline {
+          display: flex;
+          justify-content: center;
+        }
+      </style>
+      <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
+      <main>
+        <h2>{title}</h2>
+        <p>
+          <strong class="byline">
+            <time datetime={date?.toISOString()}>{formattedDate}</time>
+          </strong>
+        </p>
+        {
+          coverImage && (
+            <ItemCoverImage
+              coverImage={coverImage}
+              alt={coverImageAlt ?? title}
+            />
+          )
+        }
+        <slot />
+      </main>
+      <DefaultFooter />
+    </div>
+  </body>
+</SharedLayout>
