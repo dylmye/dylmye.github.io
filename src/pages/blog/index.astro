@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import CollectionIndex from "../../layouts/collectionIndex.astro";
+import {
+	formatBlogPost,
+	sortCollectionEntriesByDate,
+} from "../../utils/collections";
+
+const allBlogPosts = await getCollection("blogPosts");
+const postsData = allBlogPosts
+	.sort(sortCollectionEntriesByDate)
+	.map(formatBlogPost);
+---
+<CollectionIndex title="Blog Posts" slug="blog" items={postsData} />

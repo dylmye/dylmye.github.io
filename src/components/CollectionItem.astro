@@ -1,0 +1,49 @@
+---
+import type CollectionEntryBase from "../types/CollectionEntryBase";
+
+type Props = CollectionEntryBase & {
+	link: string;
+	totalItemsInSet: number;
+	setPos: number;
+	dateFormatter: Intl.DateTimeFormat;
+};
+
+const { id, title, blurb, date, category, link, totalItemsInSet, setPos } =
+	Astro.props;
+
+const itemId = `entry-${id}`;
+const formattedDate = Astro.props.dateFormatter.format(date);
+---
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+  }
+  article:hover a {
+    text-decoration-color: light-dark(rgb(6, 0, 88), rgb(221, 219, 255));
+  }
+  .blurb {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+</style>
+<article
+  aria-labelledby={`${itemId}-title`}
+  aria-setsize={totalItemsInSet}
+  aria-posinset={setPos}
+>
+  <a id={`${itemId}-title`} href={link}>
+    <strong>{title}</strong>
+  </a>
+  {blurb && <a href={link} class="blurb" tabindex="-1">{blurb}</a>}
+  <a href={link} tabindex="-1">
+    <small>
+      <time datetime={date?.toISOString()}>{formattedDate}</time> ※ {category}
+    </small>
+  </a>
+</article>

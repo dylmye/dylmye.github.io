@@ -1,0 +1,60 @@
+---
+---
+
+<style>
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    inline-size: 100%;
+    max-inline-size: 400px;
+    margin: 1rem auto;
+    position: relative;
+    contain: layout;
+  }
+  .intro::after {
+    content: "";
+    position: absolute;
+    background-image: url('/avatar.webp');
+    background-size: contain;
+    background-color: #ffffff;
+    border-radius: 100%;
+    inset-inline-end: -40px;
+    inset-block-end: -10px;
+    inline-size: 32px;
+    block-size: 32px;
+  }
+
+  blockquote {
+    background-color: #0088ff;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 18px;
+    align-self: flex-end;
+    position: relative;
+    /* todo: stop this from beginning at bottom of page */
+    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+  }
+  blockquote:last-child::after {
+    content: "";
+    position: absolute;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuMTkwMyAwLjAwMzM2NzA4QzEzLjE3MTggMC4wMDg2NDQ2MyAxMy4xNDk0IDAuMDE5MDc3NSAxMy4xMjM2IDAuMDM0MzU5MUMxMi4xMTc5IDAuNDI0NDk0IDIuMTEzNzUgNC4wMTg5MyAwLjEzMDgzOSA0LjczMTA5Qy0wLjAxNzMwNTQgNC43ODQzIC0wLjA0NjE3MDIgNC45ODEzMyAwLjA3Nzg0NDYgNS4wNzgyN0M1LjI4NTQ5IDkuMTQ5MTEgNy45NTg5IDExLjEwOTUgMTEuMzg2NyAxMC45OTYyQzExLjU1MjEgMTAuOTkwOCAxMS42MzA5IDEwLjc5NTEgMTEuNTIxNCAxMC42NzFDOS4zMDU3NCA4LjE2MDIgOC41NzQ0NCA2Ljg4Nzg4IDguNzkwMjkgNS45NDU1OEM4Ljk4ODc4IDQuNTk0NzggMTIuNDA3OCAwLjQ1NzMyNCAxMy4xMjM2IDAuMDM0MzU5MUMxMy4xOTk0IDAuMDA0OTQ2MjUgMTMuMjI0MSAtMC4wMDYyNTM4MSAxMy4xOTAzIDAuMDAzMzY3MDhaIiBmaWxsPSIjMDhmIi8+PC9zdmc+Cg==)
+      no-repeat center center;
+    background-size: contain;
+    inset-inline-end: 0;
+    inset-block-end: -9px;
+    inline-size: 28px;
+    block-size: 22px;
+  }
+</style>
+<aside class="intro">
+  <blockquote>
+    Howdy 🤠 I'm Dylan, a London-based full-stack engineer with nearly a decade
+    of experience in building performant, accessible and beautiful websites and
+    apps.
+  </blockquote>
+  <blockquote>
+    Check out some of the projects I've worked on below, or enjoy the blog posts
+    (of questionable quality...)
+  </blockquote>
+</aside>

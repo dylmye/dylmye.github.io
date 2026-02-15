@@ -1,0 +1,51 @@
+---
+import CollectionItem from "../components/CollectionItem.astro";
+import DefaultHtmlHead from "../components/DefaultHtmlHead.astro";
+import type CollectionEntryBase from "../types/CollectionEntryBase";
+import SharedLayout from "./sharedLayout.astro";
+
+type Props = {
+	title: string;
+	slug: string;
+	items: CollectionEntryBase[];
+};
+
+const { title, slug, items } = Astro.props;
+
+const dateFormatter = Intl.DateTimeFormat("en-GB", { dateStyle: "medium" });
+---
+
+<SharedLayout>
+  <head>
+    <DefaultHtmlHead />
+    <title>All {title} | Dylan Myers</title>
+  </head>
+  <body>
+    <style>
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    </style>
+    <main id="root">
+      <header>
+        <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
+        <h2>All {title}</h2>
+      </header>
+      <section>
+        {
+          items.map((e, i) => (
+            <CollectionItem
+              {...e}
+              link={`/${slug}/${e.id}`}
+              totalItemsInSet={items.length}
+              setPos={i + 1}
+              dateFormatter={dateFormatter}
+            />
+          ))
+        }
+      </section>
+    </main>
+  </body>
+</SharedLayout>

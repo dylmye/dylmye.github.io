@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import CollectionBlock from "../components/CollectionBlock.astro";
+import MessageIntro from "../components/MessageIntro.astro";
+import Homepage from "../layouts/homepage.astro";
+import {
+	formatBlogPost,
+	formatCmPortfolioItems,
+	formatProject,
+	sortCollectionEntriesByDate,
+	sortCollectionEntriesByYear,
+} from "../utils/collections";
+
+const allBlogPosts = await getCollection("blogPosts");
+const latest3BlogPosts = allBlogPosts
+	.sort(sortCollectionEntriesByDate)
+	.slice(0, 3)
+	.map(formatBlogPost);
+const extraBlogPostsCount = Math.max(allBlogPosts.length - 3, 0);
+
+const allProjects = await getCollection("projects");
+const latest3Projects = allProjects
+	.sort(sortCollectionEntriesByDate)
+	.slice(0, 3)
+	.map(formatProject);
+const extraProjectsCount = Math.max(allProjects.length - 3, 0);
+
+const allCmPortfolioItems = await getCollection("communityMgmtPortfolio");
+const latest3CmPortfolioItems = allCmPortfolioItems
+	.sort(sortCollectionEntriesByYear)
+	.slice(0, 3)
+	.map(formatCmPortfolioItems);
+const extraCmPortfolioItemsCount = Math.max(allCmPortfolioItems.length - 3, 0);
+---
+
+<Homepage>
+  <style>
+    h1,
+    h2 {
+      text-align: center;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      gap: 4rem;
+    }
+  </style>
+  <h1>Dylan Myers</h1>
+  <MessageIntro />
+  <main>
+    <CollectionBlock
+      id="blog"
+      title="Blog Posts"
+      entries={latest3BlogPosts}
+      extraCount={extraBlogPostsCount}
+    />
+    <CollectionBlock
+      id="projects"
+      title="Projects"
+      entries={latest3Projects}
+      extraCount={extraProjectsCount}
+    />
+    <CollectionBlock
+      id="community-management"
+      title="Community Management Portfolio"
+      entries={latest3CmPortfolioItems}
+      extraCount={extraCmPortfolioItemsCount}
+    />
+  </main>
+</Homepage>
