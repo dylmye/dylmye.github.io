@@ -19,7 +19,7 @@ export default defineConfig({
       {
         provider: fontProviders.bunny(),
         name: "DM Sans",
-        weights: [100, 400, 700, 900],
+        weights: [400, 700],
         styles: ["normal", "italic"],
         cssVariable: "--font-sans-serif",
       },
