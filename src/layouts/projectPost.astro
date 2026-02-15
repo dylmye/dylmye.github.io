@@ -31,33 +31,51 @@ const formattedDate = dateFormatter.format(date);
           text-wrap: balance;
           overflow-wrap: break-word;
         }
+        header,
         main {
           inline-size: 75rem;
           max-inline-size: 100%;
           margin: 0 auto;
-          font-size: 1.25rem;
         }
         .byline {
           display: flex;
           justify-content: center;
         }
+        main,
+        .byline {
+          font-size: 1.25rem;
+        }
       </style>
-      <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
-      <main>
+      <header>
+        <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
         <h2>{title}</h2>
+      </header>
+      <main>
         <p>
           <strong class="byline">
             <time datetime={date?.toISOString()}>{formattedDate}</time>
             {tags && ` ※ ${tags.join(", ")}`}
           </strong>
         </p>
-        {(url ?? productHuntUrl) && <p>
-          <strong class="byline">
-            {url && <a href={url} target="_blank">{url}</a>}
-            {url && productHuntUrl && ` ※ `}
-            {productHuntUrl && <a href={productHuntUrl} target="_blank">Product Hunt listing</a>}
-          </strong>
-        </p>}
+        {
+          (url ?? productHuntUrl) && (
+            <p>
+              <strong class="byline">
+                {url && (
+                  <a href={url} target="_blank">
+                    {url}
+                  </a>
+                )}
+                {url && productHuntUrl && ` ※ `}
+                {productHuntUrl && (
+                  <a href={productHuntUrl} target="_blank">
+                    Product Hunt listing
+                  </a>
+                )}
+              </strong>
+            </p>
+          )
+        }
         {
           coverImage && (
             <ItemCoverImage

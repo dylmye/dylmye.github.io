@@ -23,10 +23,7 @@ const formattedDate = dateFormatter.format(date);
 
 <SharedLayout>
   <head>
-    <ContentHtmlHead
-      {...Astro.props}
-      coverImage={coverImage?.src}
-    />
+    <ContentHtmlHead {...Astro.props} coverImage={coverImage?.src} />
   </head>
   <body>
     <div id="root">
@@ -41,25 +38,33 @@ const formattedDate = dateFormatter.format(date);
           text-wrap: balance;
           overflow-wrap: break-word;
         }
+        header,
         main {
           inline-size: 75rem;
           max-inline-size: 100%;
           margin: 0 auto;
-          font-size: 1.25rem;
         }
         .byline {
           display: flex;
           justify-content: center;
         }
+        main,
+        .byline {
+          font-size: 1.25rem;
+        }
       </style>
-      <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
-      <main>
+      <header>
+        <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
         <h2>{title}</h2>
-        <strong class="byline">
-          <time datetime={date?.toISOString()}>{formattedDate}</time>
-          &nbsp;※{" "}
-          {category}
-        </strong>
+        <p>
+          <strong class="byline">
+            <time datetime={date?.toISOString()}>{formattedDate}</time>
+            &nbsp;※{" "}
+            {category}
+          </strong>
+        </p>
+      </header>
+      <main>
         {
           coverImage && (
             <ItemCoverImage

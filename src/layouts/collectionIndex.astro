@@ -29,8 +29,10 @@ const dateFormatter = Intl.DateTimeFormat("en-GB", { dateStyle: "medium" });
       }
     </style>
     <main id="root">
-      <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
-      <h2>All {title}</h2>
+      <header>
+        <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
+        <h2>All {title}</h2>
+      </header>
       <section>
         {
           items.map((e, i) => (
