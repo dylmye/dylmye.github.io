@@ -1,4 +1,5 @@
 ---
+import { SimpleAnalytics } from "astro-simpleanalytics-plugin";
 ---
 <style>
     footer {
@@ -23,3 +24,5 @@
     <p><strong>Designed by Dylan Myers with {'\u{1FA77}'}</strong></p>
     <p><a href="/accessibility">Accessibility Statement</a></p>
 </footer>
+
+<SimpleAnalytics customDomain="stats.dylmye.me" debug={import.meta.env.DEV} />

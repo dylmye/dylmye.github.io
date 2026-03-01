@@ -1,3 +1,5 @@
 onlyBuiltDependencies:
   - esbuild
   - sharp
+overrides:
+  "astro-simpleanalytics-plugin@0.3.20>astro": "$astro"
