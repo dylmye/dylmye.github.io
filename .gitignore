@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# https://www.indexnow.org/ / https://github.com/velohost/astro-indexnow?tab=readme-ov-file#state--cache-file-important
+!.astro-indexnow-cache.json
