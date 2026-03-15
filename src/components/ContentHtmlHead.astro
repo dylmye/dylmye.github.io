@@ -11,6 +11,7 @@ type Props = CollectionEntryBase & {
 
 const { title, blurb, coverImage, date } = Astro.props;
 
+const coverImagePath = coverImage ? new URL(coverImage, Astro.site) : null;
 const isoDate = new Date(date).toISOString();
 const metadataJson = JSON.stringify(
 	{
@@ -18,7 +19,7 @@ const metadataJson = JSON.stringify(
 		"@type": "BlogPosting",
 		headline: title,
 		description: blurb,
-		image: coverImage,
+		image: coverImagePath,
 		author: {
 			"@type": "Person",
 			name: "Dylan Myers",
@@ -40,7 +41,7 @@ const metadataJson = JSON.stringify(
 <meta property="og:url" content={Astro.url.toString()}>
 <meta property="article:published_time" content={isoDate}>
 <meta property="article:author" content="Dylan Myers">
-{coverImage && <meta property="og:image" content={coverImage}>}
+{coverImagePath && <meta property="og:image" content={coverImagePath}>}
 
 <script is:inline type="application/ld+json" set:html={metadataJson} />
 <Font cssVariable="--font-monospace" />

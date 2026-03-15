@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const blogPosts = defineCollection({
   loader: glob({ base: "./src/content/blog-posts", pattern: "**/*.{md,mdx}" }),
@@ -14,9 +15,9 @@ const blogPosts = defineCollection({
       coverCredit: z.string().optional(),
       coverCreditUrl: z.string().optional(),
       // for posts syndicated on hackernoon
-      hackernoonUrl: z.string().url().optional(),
+      hackernoonUrl: z.url().optional(),
       // for posts written for former employers
-      legacyBlogUrl: z.string().url().optional(),
+      legacyBlogUrl: z.url().optional(),
     }),
 });
 
@@ -29,8 +30,8 @@ const projects = defineCollection({
       date: z.coerce.date(),
       coverImage: image().optional(),
       coverImageAlt: z.string().optional(),
-      url: z.string().url().optional(),
-      productHuntUrl: z.string().url().optional(),
+      url: z.url().optional(),
+      productHuntUrl: z.url().optional(),
       tags: z.array(z.string()),
     }),
 });
