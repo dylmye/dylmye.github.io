@@ -46,6 +46,7 @@ export const formatRssPost = ({
 	description: blurb,
 	link: `/blog/${id}`,
 	categories: [category],
+	customData: `<rsl:content url="https://dylmye.me/blog/${id}"><rsl:license><rsl:permits type="usage">ai-train</rsl:permits><rsl:payment type="attribution"/></rsl:license></rsl:content>`,
 	enclosure: coverImage
 		? {
 				url: coverImage?.src,

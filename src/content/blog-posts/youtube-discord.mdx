@@ -7,7 +7,7 @@ coverImageAlt: "Screenshot of Discord notification messages from the tutorial"
 category: "how-to"
 ---
 
-Just like [Twitch notifications](https://dylmye.me/2021/03/08/twitch-discord/), notifying your Discord server about your YouTube uploads sounds like something that should be built in. Until it is, I have created a solution using AWS Lambda and API Gateway solutions. But first, here's an even easier (and free) way without using the oft slow and unreliable services like MEE6 and Dyno. The jist of how these solutions work is that we continually check a feed YouTube provides, and when we get a new entry we use a [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to post a new message.
+Just like [Twitch notifications](https://dylmye.me/blog/twitch-discord/), notifying your Discord server about your YouTube uploads sounds like something that should be built in. Until it is, I have created a solution using AWS Lambda and API Gateway solutions. But first, here's an even easier (and free) way without using the oft slow and unreliable services like MEE6 and Dyno. The jist of how these solutions work is that we continually check a feed YouTube provides, and when we get a new entry we use a [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) to post a new message.
 
 ## Method 1: (More than a) Pipedream
 
@@ -47,7 +47,7 @@ The script automatically handles the verification process by responding with the
 
 ## Method 2(b): If you don't want to use Serverless
 
-Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/2021/03/08/twitch-discord/) these will be familiar to you. Please make sure you have [Python 3](https://www.python.org/downloads/) installed.
+Let's manually set up the script. If you've followed the steps in the [Twitch guide](https://dylmye.me/blog/twitch-discord/) these will be familiar to you. Please make sure you have [Python 3](https://www.python.org/downloads/) installed.
 
 First, grab [the channel ID / @handle](https://www.streamweasels.com/tools/youtube-channel-id-and-user-id-convertor/) you'll need it. Next, clone/download [this GitHub repository I made](https://github.com/dylmye/superfeedr-discord). Follow the install instructions including setting up the `env.py` with the Discord webhook URL you set up earlier, and optionally a [Discord role ID](https://www.youtube.com/watch?v=Xme4lBvrCN8). Zip up everything in the folder, because we're going to upload all of this to _The Cloud™_.
 
