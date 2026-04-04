@@ -1012,6 +1012,7 @@ packages:
   astro-indexnow@2.1.0:
     resolution: {integrity: sha512-ltDOMU2VAbPEigXD6Wzhsr25Dik0LGAiynk3Kl1iamI6NMj6ABXnuqMx1itQh9TijdJHcjXDnvvtZ6bozDFfTA==}
     engines: {node: '>=18'}
+    deprecated: Please upgrade to 2.1.1 for Windows path fix and Astro v6 support.
     peerDependencies:
       astro: ^4.0.0 || ^5.0.0
 
