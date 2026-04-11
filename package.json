@@ -22,6 +22,7 @@
 		"@astrojs/sitemap": "^3.7.2",
 		"astro": "^6.1.5",
 		"astro-indexnow": "2.1.1",
+		"astro-lqip": "^1.8.1",
 		"astro-simpleanalytics-plugin": "0.3.22",
 		"sharp": "^0.34.5"
 	},

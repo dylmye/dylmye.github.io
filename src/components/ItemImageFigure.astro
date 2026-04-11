@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from "astro-lqip/components";
 
 const { src, alt } = Astro.props;
 ---
@@ -20,6 +20,6 @@ const { src, alt } = Astro.props;
     }
 </style>
 <figure>
-    <Image src={src} alt={alt} />
+    <Image src={src} alt={alt} loading="lazy" />
     {alt && <figcaption><small><em>{alt}</em></small></figcaption>}
 </figure>

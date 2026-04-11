@@ -26,6 +26,9 @@ importers:
       astro-indexnow:
         specifier: 2.1.1
         version: 2.1.1(astro@6.1.5(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))
+      astro-lqip:
+        specifier: ^1.8.1
+        version: 1.8.1(astro@6.1.5(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(sharp@0.34.5)
       astro-simpleanalytics-plugin:
         specifier: 0.3.22
         version: 0.3.22(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
@@ -1015,6 +1018,11 @@ packages:
     peerDependencies:
       astro: ^4.0.0 || ^5.0.0 || ^6.0.0
 
+  astro-lqip@1.8.1:
+    resolution: {integrity: sha512-6cOWr16igaeTCWtLg6ZMAlsa8mIgqueY331wu01dF/yZenlrIGXKoH7Bpc3U8SvcfifBqAKyKHgziFqlcErDWA==}
+    peerDependencies:
+      astro: '>=3.3.0'
+
   astro-simpleanalytics-plugin@0.3.22:
     resolution: {integrity: sha512-uuKF+FlcIdsl8am/g+CNWrwamCBFXK9jLNyaUATB33hezSowzolvWglMyBZcXYQTrwuht7vAjcmWpnfI55vssQ==}
     engines: {node: '>=18.19', pnpm: '>=8'}
@@ -1737,6 +1745,11 @@ packages:
   picomatch@4.0.3:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
+
+  plaiceholder@3.0.0:
+    resolution: {integrity: sha512-jwHxxHPnr1BwRzPCeZgEK2BMsEy2327sWynw3qb6XC/oGgGDUTPtR8pFxFQmNArhMBwhkUbUr5OPhhIJpCa8eQ==}
+    peerDependencies:
+      sharp: '>= 0.30.6'
 
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
@@ -3208,6 +3221,13 @@ snapshots:
     dependencies:
       astro: 6.1.5(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
 
+  astro-lqip@1.8.1(astro@6.1.5(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(sharp@0.34.5):
+    dependencies:
+      astro: 6.1.5(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
+      plaiceholder: 3.0.0(sharp@0.34.5)
+    transitivePeerDependencies:
+      - sharp
+
   astro-simpleanalytics-plugin@0.3.22(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       astro: 5.18.0(@types/node@24.12.0)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
@@ -4509,6 +4529,10 @@ snapshots:
   picomatch@2.3.1: {}
 
   picomatch@4.0.3: {}
+
+  plaiceholder@3.0.0(sharp@0.34.5):
+    dependencies:
+      sharp: 0.34.5
 
   postcss@8.5.6:
     dependencies:

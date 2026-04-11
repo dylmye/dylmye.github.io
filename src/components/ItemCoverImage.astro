@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import { Image } from "astro-lqip/components";
 
 type Props = {
 	coverImage: ImageMetadata;
@@ -28,7 +28,7 @@ const { coverImage, alt, caption, captionUrl } = Astro.props;
   }
 </style>
 <figure class="hero">
-  <Image src={coverImage} alt={alt} loading="eager" />
+  <Image src={coverImage} alt={alt} loading="eager" width={1920} height={1080} />
   {
     caption && (
       <figcaption>
