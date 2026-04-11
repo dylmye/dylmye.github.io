@@ -13,10 +13,9 @@ export default defineConfig({
   integrations: [
     sitemap(),
     mdx(),
-    // yes it's a key in source, no it doesn't matter because
-    // it's just bing webmaster
-    // https://github.com/velohost/astro-indexnow/issues/2
-    // indexnow({ key: "X" }),
+    // key is intentionally kept in source code
+    // as it is required to be public
+    indexnow({ key: "97207b9f71074544b8950f4ff122a871" }),
   ],
   fonts: [
     {
