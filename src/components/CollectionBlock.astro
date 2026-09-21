@@ -15,17 +15,6 @@ const collectionId = `collection-${id}`;
 
 const dateFormatter = Intl.DateTimeFormat("en-GB", { dateStyle: "medium" });
 ---
-<style>
-.collection {
-    flex: 1;
-    min-inline-size: fit-content;
-    border-inline-start: 3px solid light-dark(rgb(6, 0, 88), rgb(221, 219, 255));
-    padding-inline-start: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-</style>
 <div class="collection" role="feed" aria-labelledby={`${collectionId}-title`}>
     <h3 id={`${collectionId}-title`}>Latest {title}</h3>
     {entries.map((e, i) => <CollectionItem {...e} link={`/${id}/${e.id}`} totalItemsInSet={entries.length} setPos={i + 1} dateFormatter={dateFormatter} />)}
