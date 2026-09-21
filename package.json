@@ -6,7 +6,7 @@
 	},
 	"private": true,
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"scripts": {
 		"check": "astro check",
 		"dev": "astro dev",
@@ -17,27 +17,22 @@
 		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^5.0.3",
-		"@astrojs/rss": "^4.0.18",
-		"@astrojs/sitemap": "^3.7.2",
-		"astro": "^6.1.5",
-		"astro-indexnow": "2.1.1",
-		"astro-lqip": "^1.8.1",
-		"astro-simpleanalytics-plugin": "0.3.22",
-		"sharp": "^0.34.5"
+		"@astrojs/mdx": "^8.0.1",
+		"@astrojs/rss": "^4.0.19",
+		"@astrojs/sitemap": "^3.7.4",
+		"astro": "catalog:",
+		"astro-indexnow": "2.3.10",
+		"astro-lqip": "^1.8.4",
+		"astro-simpleanalytics-plugin": "0.4.0",
+		"sharp": "^0.35.4"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.8",
-		"@biomejs/biome": "2.4.11",
-		"typescript": "^5.9.3"
-	},
-	"pnpm": {
-		"overrides": {
-			"@astrojs/internal-helpers": "0.8.0"
-		}
+		"@astrojs/check": "^0.9.10",
+		"@biomejs/biome": "2.5.14",
+		"typescript": "^6.0.3"
 	},
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
-	"packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
+	"packageManager": "pnpm@12.5.1+sha512.e3f305bc784a2bc89f5ad3b6138889470fae8d2af5f36b61216ec91c2c3d64089775f9de38aac331044ea40f245cb0d5666392dfdf65824e1907ef6a2c62de5f"
 }
