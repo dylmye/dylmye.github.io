@@ -14,18 +14,22 @@ const { id, title, blurb, date, category, link, totalItemsInSet, setPos } =
 const itemId = `entry-${id}`;
 const formattedDate = Astro.props.dateFormatter.format(date);
 ---
-<article
-  aria-labelledby={`${itemId}-title`}
-  aria-setsize={totalItemsInSet}
-  aria-posinset={setPos}
->
-  <a id={`${itemId}-title`} href={link}>
-    <strong>{title}</strong>
+
+<style>
+  li {
+    display: block;
+    width: fit-content;
+  }
+</style>
+
+<li>
+  <a href={link}>
+    <h4>{title}</h4>
+    <p>{blurb}</p>
+    <footer>
+      <small>
+        <time datetime={date?.toISOString()}>{formattedDate}</time> ※ {category}
+      </small>
+    </footer>
   </a>
-  {blurb && <a href={link} class="blurb" tabindex="-1">{blurb}</a>}
-  <a href={link} tabindex="-1">
-    <small>
-      <time datetime={date?.toISOString()}>{formattedDate}</time> ※ {category}
-    </small>
-  </a>
-</article>
+</li>

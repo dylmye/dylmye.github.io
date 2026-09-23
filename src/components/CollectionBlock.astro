@@ -15,8 +15,39 @@ const collectionId = `collection-${id}`;
 
 const dateFormatter = Intl.DateTimeFormat("en-GB", { dateStyle: "medium" });
 ---
-<div class="collection" role="feed" aria-labelledby={`${collectionId}-title`}>
-    <h3 id={`${collectionId}-title`}>Latest {title}</h3>
-    {entries.map((e, i) => <CollectionItem {...e} link={`/${id}/${e.id}`} totalItemsInSet={entries.length} setPos={i + 1} dateFormatter={dateFormatter} />)}
-    {extraCount ? <span><em><a href={`/${id}`}>+ {extraCount} older {title.toLocaleLowerCase()}</a></em></span> : undefined}
+<style>
+	ol {
+		margin-bottom: 1rem;
+		margin-inline-start: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+</style>
+<div class="collection">
+	<h3 id={`${collectionId}-title`}>Latest {title}</h3>
+	<ol aria-labelledby={`${collectionId}-title`}>
+		{
+			entries.map((e, i) => (
+				<CollectionItem
+					{...e}
+					link={`/${id}/${e.id}`}
+					totalItemsInSet={entries.length}
+					setPos={i + 1}
+					dateFormatter={dateFormatter}
+				/>
+			))
+		}
+	</ol>
+	{
+		extraCount ? (
+			<span>
+				<em>
+					<a href={`/${id}`}>
+						+ {extraCount} older {title.toLocaleLowerCase()}
+					</a>
+				</em>
+			</span>
+		) : undefined
+	}
 </div>
