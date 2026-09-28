@@ -1,0 +1,26 @@
+[tools]
+node = "24"
+pnpm = "12.5.1"
+
+# [settings]
+# idiomatic_version_file_enable_tools = ['pnpm']
+# Disabled until "SyntaxError: Invalid or unexpected token" is fixed
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
+[tasks.pnpm-install]
+description = 'Installs dependencies with pnpm'
+run = 'pnpm install'
+sources = ['package.json', 'pnpm-lock.yaml', 'mise.toml']
+outputs = ['node_modules/.pnpm/lock.yaml']
+
+[tasks.health]
+description = 'Astro health check'
+run = 'pnpm check'
+depends = ['pnpm-install']
+
+[tasks.dev]
+description = 'Calls your dev script in `package.json`'
+run = 'pnpm dev'
+depends = ['pnpm-install']
