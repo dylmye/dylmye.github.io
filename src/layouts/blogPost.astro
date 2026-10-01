@@ -44,12 +44,7 @@ const formattedDate = dateFormatter.format(date);
           max-inline-size: 100%;
           margin: 0 auto;
         }
-        .byline {
-          display: flex;
-          justify-content: center;
-        }
-        main,
-        .byline {
+        main {
           font-size: 1.25rem;
         }
       </style>
@@ -57,7 +52,7 @@ const formattedDate = dateFormatter.format(date);
         <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
         <h2>{title}</h2>
         <p>
-          <strong class="byline">
+          <strong>
             <time datetime={date?.toISOString()}>{formattedDate}</time>
             &nbsp;※{" "}
             {category}

@@ -20,6 +20,9 @@ const formattedDate = Astro.props.dateFormatter.format(date);
     display: block;
     width: fit-content;
   }
+  li a:not(:hover) {
+    text-decoration-color: transparent;
+  }
 </style>
 
 <li>

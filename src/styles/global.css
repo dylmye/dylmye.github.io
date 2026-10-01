@@ -42,9 +42,14 @@ body {
 }
 
 a {
-	color: var(--default-text-color);
-	text-decoration: none;
-	transition: text-decoration-color 0.1s ease-in;
+	text-decoration: dashed underline var(--default-text-color);
+	text-decoration-color: oklch(from var(--default-text-color) l c h / 0.75);
+	text-underline-offset: 2px;
+	text-decoration-thickness: 2px;
+	text-decoration-skip-ink: all;
+	transition:
+		text-underline-offset 0.1s ease-in,
+		text-decoration-color 0.2s ease-in;
 }
 
 a,
@@ -54,11 +59,12 @@ a:hover {
 
 a:hover {
 	text-decoration-color: var(--default-text-color);
+	text-underline-offset: 4px;
 }
 
-/* a:visited {
-	text-decoration-color: red;
-} */
+h1 a {
+	text-decoration-color: transparent;
+}
 
 code {
 	font-family: var(--font-monospace);
@@ -72,6 +78,6 @@ blockquote > p {
 #root {
 	margin-inline: 10vw;
 	margin-block-start: 2rem;
-	container-type: size;
+	container-type: inline-size;
 	container-name: root;
 }
