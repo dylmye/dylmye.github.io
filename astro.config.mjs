@@ -20,7 +20,7 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.bunny(),
-      name: "Lacquer",
+      name: "Grenze",
       cssVariable: "--font-display",
     },
     {

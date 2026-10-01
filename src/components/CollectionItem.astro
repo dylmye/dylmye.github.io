@@ -8,42 +8,29 @@ type Props = CollectionEntryBase & {
 	dateFormatter: Intl.DateTimeFormat;
 };
 
-const { id, title, blurb, date, category, link, totalItemsInSet, setPos } =
-	Astro.props;
+const { title, blurb, date, category, link } = Astro.props;
 
-const itemId = `entry-${id}`;
 const formattedDate = Astro.props.dateFormatter.format(date);
 ---
 
 <style>
-  article {
-    display: flex;
-    flex-direction: column;
-    gap: .2rem;
+  li {
+    display: block;
+    width: fit-content;
   }
-  article:hover a {
-    text-decoration-color: var(--default-text-color);
-  }
-  .blurb {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  li a:not(:hover) {
+    text-decoration-color: transparent;
   }
 </style>
-<article
-  aria-labelledby={`${itemId}-title`}
-  aria-setsize={totalItemsInSet}
-  aria-posinset={setPos}
->
-  <a id={`${itemId}-title`} href={link}>
-    <strong>{title}</strong>
+
+<li>
+  <a href={link}>
+    <h4>{title}</h4>
+    <p>{blurb}</p>
+    <footer>
+      <small>
+        <time datetime={date?.toISOString()}>{formattedDate}</time> ※ {category}
+      </small>
+    </footer>
   </a>
-  {blurb && <a href={link} class="blurb" tabindex="-1">{blurb}</a>}
-  <a href={link} tabindex="-1">
-    <small>
-      <time datetime={date?.toISOString()}>{formattedDate}</time> ※ {category}
-    </small>
-  </a>
-</article>
+</li>

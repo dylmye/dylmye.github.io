@@ -33,9 +33,9 @@ const formattedDate = dateFormatter.format(date);
           margin-block-end: 1rem;
         }
         h2 {
-          font-size: clamp(2rem, 2.5vw, 4rem);
-          text-align: center;
-          text-wrap: balance;
+          font-size: clamp(1.5rem, 15cqw, 3rem);
+          line-height: 1.25;
+          text-wrap: auto;
           overflow-wrap: break-word;
         }
         header,
@@ -44,12 +44,7 @@ const formattedDate = dateFormatter.format(date);
           max-inline-size: 100%;
           margin: 0 auto;
         }
-        .byline {
-          display: flex;
-          justify-content: center;
-        }
-        main,
-        .byline {
+        main {
           font-size: 1.25rem;
         }
       </style>
@@ -57,7 +52,7 @@ const formattedDate = dateFormatter.format(date);
         <h1><a href="/" title="Return to homepage">Dylan Myers</a></h1>
         <h2>{title}</h2>
         <p>
-          <strong class="byline">
+          <strong>
             <time datetime={date?.toISOString()}>{formattedDate}</time>
             &nbsp;※{" "}
             {category}
