@@ -8,10 +8,8 @@ type Props = CollectionEntryBase & {
 	dateFormatter: Intl.DateTimeFormat;
 };
 
-const { id, title, blurb, date, category, link, totalItemsInSet, setPos } =
-	Astro.props;
+const { title, blurb, date, category, link } = Astro.props;
 
-const itemId = `entry-${id}`;
 const formattedDate = Astro.props.dateFormatter.format(date);
 ---
 

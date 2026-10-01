@@ -1,19 +1,31 @@
 {
 	"name": "Dylan Myers",
 	"short_name": "Dylan",
+	"orientation": "portrait-primary",
+	"start_url": "/",
+	"display": "standalone",
+	"lang": "en-GB",
+	"dir": "ltr",
 	"icons": [
 		{
-			"src": "/favicon/android-chrome-192x192.png",
-			"sizes": "192x192",
-			"type": "image/png"
+			"src": "/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
 		},
 		{
-			"src": "/favicon/android-chrome-512x512.png",
+			"src": "/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/icon-512.png",
 			"sizes": "512x512",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "any maskable"
 		}
 	],
 	"theme_color": "#e4e6fc",
-	"background_color": "#002246",
-	"display": "standalone"
+	"background_color": "#002246"
 }
